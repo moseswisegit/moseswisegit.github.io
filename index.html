@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Moïse Agbossaga — Architecte Logiciel & Développeur Full Stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #0B1120;
+    --navy2:   #111827;
+    --amber:   #0e4e78;
+    --amber2:  #1a6fa8;
+    --white:   #FFFFFF;
+    --bg:      #F9FAFB;
+    --bg2:     #F3F4F6;
+    --text:    #111827;
+    --gray:    #6B7280;
+    --gray2:   #9CA3AF;
+    --border:  #E5E7EB;
+    --green:   #059669;
+    --mono:    'JetBrains Mono', monospace;
+    --display: 'Space Grotesk', sans-serif;
+    --body:    'Inter', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--white);
+    color: var(--text);
+    font-family: var(--body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5rem;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: var(--mono); font-size: 1rem; color: var(--amber); font-weight: 700; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--amber); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 8rem 5rem 5rem;
+    background: linear-gradient(135deg, #fff 60%, #fffbeb 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-eyebrow {
+    font-family: var(--mono); font-size: 0.8rem;
+    color: var(--amber); letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-eyebrow::before { content:''; display:block; width:2rem; height:1px; background:var(--amber); }
+  .hero-name {
+    font-family: var(--display);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700; line-height: 1.0;
+    letter-spacing: -0.03em; margin-bottom: 0.5rem; color: var(--navy);
+  }
+  .hero-name span { color: var(--amber); }
+  .hero-title {
+    font-family: var(--mono); font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--gray); margin-bottom: 1.75rem; min-height: 1.8em;
+  }
+  .cursor { display:inline-block; width:2px; height:1.1em; background:var(--amber); margin-left:2px; animation:blink 1s steps(1) infinite; vertical-align:text-bottom; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+  .hero-desc { max-width:600px; color:var(--gray); font-size:1.05rem; margin-bottom:2.5rem; line-height:1.75; }
+  .hero-cta { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem; }
+  .btn {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    padding:0.75rem 1.75rem; border-radius:0.375rem;
+    font-weight:600; font-size:0.9rem; text-decoration:none;
+    transition:all 0.2s; cursor:pointer; border:none;
+  }
+  .btn-primary { background:var(--navy); color:#fff; }
+  .btn-primary:hover { background:var(--amber); transform:translateY(-1px); }
+  .btn-outline { background:transparent; color:var(--navy); border:1.5px solid var(--border); }
+  .btn-outline:hover { border-color:var(--amber); color:var(--amber); }
+  .hero-badges { display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .hero-badge {
+    font-family:var(--mono); font-size:0.72rem;
+    background:var(--bg2); border:1px solid var(--border);
+    border-radius:9999px; padding:0.3rem 0.8rem; color:var(--gray);
+  }
+
+  /* ── STATS ── */
+  #stats {
+    padding:3rem 5rem; background:var(--navy);
+  }
+  .stats-grid {
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+    gap:2rem; max-width:1100px; margin:0 auto; text-align:center;
+  }
+  .stat-number { font-family:var(--display); font-size:2.5rem; font-weight:700; color:var(--amber2); line-height:1; }
+  .stat-label { font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.35rem; letter-spacing:0.05em; }
+
+  /* ── SECTIONS ── */
+  .section-wrap { padding:5rem 5rem; max-width:1200px; margin:0 auto; }
+  .section-bg { background:var(--bg); }
+  .section-label { font-family:var(--mono); font-size:0.75rem; color:var(--amber); letter-spacing:0.15em; margin-bottom:0.75rem; text-transform:uppercase; }
+  .section-title { font-family:var(--display); font-size:clamp(1.75rem, 3vw, 2.5rem); font-weight:700; letter-spacing:-0.02em; margin-bottom:3rem; color:var(--navy); }
+  .section-title span { color:var(--amber); }
+
+  /* ── SKILLS ── */
+  .skills-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.25rem; }
+  .skill-card {
+    background:var(--white); border:1.5px solid var(--border);
+    border-radius:0.75rem; padding:1.5rem;
+    transition:border-color 0.2s, box-shadow 0.2s;
+  }
+  .skill-card:hover { border-color:var(--amber); box-shadow:0 4px 20px rgba(14,78,120,0.08); }
+  .skill-card-title { font-family:var(--mono); font-size:0.7rem; color:var(--amber); letter-spacing:0.12em; margin-bottom:1rem; font-weight:600; }
+  .skill-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
+  .skill-tag {
+    background:var(--bg2); color:var(--gray); border:1px solid var(--border);
+    border-radius:0.25rem; padding:0.2rem 0.55rem;
+    font-size:0.75rem; font-family:var(--mono);
+  }
+
+  /* ── PROJECTS ── */
+  .projects-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.5rem; }
+  .project-card {
+    background:var(--white); border:1.5px solid var(--border);
+    border-radius:0.75rem; padding:1.75rem;
+    transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    display:flex; flex-direction:column; gap:0.75rem;
+  }
+  .project-card:hover { border-color:var(--amber); box-shadow:0 8px 30px rgba(14,78,120,0.1); transform:translateY(-3px); }
+  .project-header { display:flex; justify-content:space-between; align-items:flex-start; }
+  .project-icon { font-size:1.75rem; }
+  .project-badge { font-family:var(--mono); font-size:0.68rem; padding:0.2rem 0.6rem; border-radius:9999px; background:rgba(5,150,105,0.08); color:var(--green); border:1px solid rgba(5,150,105,0.2); }
+  .project-badge.wip { background:rgba(14,78,120,0.08); color:var(--amber); border-color:rgba(14,78,120,0.2); }
+  .project-name { font-family:var(--display); font-size:1.15rem; font-weight:700; color:var(--navy); }
+  .project-desc { color:var(--gray); font-size:0.875rem; line-height:1.65; }
+  .project-details { color:var(--gray); font-size:0.85rem; line-height:1.65; display:none; border-top:1px solid var(--border); padding-top:0.75rem; margin-top:0.25rem; }
+  .project-details.open { display:block; }
+  .project-details ul { padding-left:1.2rem; }
+  .project-details li { margin-bottom:0.35rem; }
+  .project-stack { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:auto; }
+  .project-tag { font-family:var(--mono); font-size:0.7rem; color:var(--amber); background:rgba(14,78,120,0.06); border:1px solid rgba(14,78,120,0.15); border-radius:0.2rem; padding:0.15rem 0.5rem; }
+  .btn-more {
+    font-family:var(--mono); font-size:0.72rem; color:var(--amber);
+    background:none; border:none; cursor:pointer; padding:0;
+    display:flex; align-items:center; gap:0.3rem; margin-top:0.25rem;
+    transition:opacity 0.2s;
+  }
+  .btn-more:hover { opacity:0.7; }
+
+  /* ── EXPERIENCE TIMELINE ── */
+  .timeline { display:flex; flex-direction:column; gap:0; }
+  .timeline-item {
+    display:grid; grid-template-columns:180px 1px 1fr;
+    gap:0 2.5rem; padding-bottom:2.5rem;
+  }
+  .timeline-date { font-family:var(--mono); font-size:0.75rem; color:var(--amber); text-align:right; padding-top:0.2rem; line-height:1.5; }
+  .timeline-line { position:relative; background:var(--border); }
+  .timeline-dot { position:absolute; top:0.2rem; left:50%; transform:translateX(-50%); width:10px; height:10px; border-radius:50%; background:var(--amber); border:2px solid var(--white); }
+  .timeline-role { font-family:var(--display); font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:0.2rem; }
+  .timeline-company { font-size:0.82rem; color:var(--amber); margin-bottom:0.6rem; font-family:var(--mono); }
+  .timeline-desc { color:var(--gray); font-size:0.875rem; line-height:1.65; }
+  .timeline-tasks { list-style:disc; padding-left:1.2rem; color:var(--gray); font-size:0.85rem; line-height:1.7; margin-top:0.5rem; display:none; }
+  .timeline-tasks.open { display:block; }
+  .timeline-stack { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.75rem; }
+
+  /* ── CONTACT ── */
+  #contact-section { background:var(--navy); padding:5rem; text-align:center; }
+  .contact-inner { max-width:580px; margin:0 auto; }
+  .contact-title { font-family:var(--display); font-size:clamp(1.75rem,3vw,2.5rem); font-weight:700; color:#fff; margin-bottom:1rem; }
+  .contact-desc { color:rgba(255,255,255,0.55); margin-bottom:2rem; }
+  .contact-links { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+  .btn-contact-primary { background:var(--amber2); color:var(--navy); }
+  .btn-contact-primary:hover { background:#fff; }
+  .btn-contact-outline { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.2); }
+  .btn-contact-outline:hover { border-color:var(--amber2); color:var(--amber2); }
+
+  footer { padding:1.5rem; text-align:center; font-family:var(--mono); font-size:0.72rem; color:rgba(255,255,255,0.3); background:var(--navy2); }
+
+  /* ── REVEAL ── */
+  .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity:1; transform:none; }
+
+  @media (max-width:768px) {
+    nav { padding:1rem 1.5rem; }
+    .nav-links { gap:1rem; }
+    #hero, .section-wrap, #stats, #contact-section { padding-left:1.5rem; padding-right:1.5rem; }
+    .timeline-item { grid-template-columns:1fr; }
+    .timeline-date { text-align:left; }
+    .timeline-line { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MA<span style="color:var(--amber)">.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#contact-section">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-eyebrow">Disponible à Québec &amp; télétravail</div>
+  <h1 class="hero-name">Moïse<br/><span>Agbossaga</span></h1>
+  <div class="hero-title" id="typed-title"><span class="cursor"></span></div>
+  <p class="hero-desc">
+    Architecte logiciel et développeur Full Stack &amp; Mobile basé à Québec. Je conçois des systèmes robustes, 
+    des applications mobiles cross-platform et des pipelines DevOps — du code propre, des résultats mesurables.
+    Admis au DESS en Intelligence Artificielle à l'Université Laval (sept. 2026).
+  </p>
+  <div class="hero-cta">
+    <a href="mailto:moseswisegit@gmail.com" class="btn btn-primary">✉ Me contacter</a>
+    <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" class="btn btn-outline">LinkedIn</a>
+    <a href="https://github.com/moseswisegit" target="_blank" class="btn btn-outline">GitHub</a>
+  </div>
+  <div class="hero-badges">
+    <span class="hero-badge">Laravel</span>
+    <span class="hero-badge">Flutter</span>
+    <span class="hero-badge">React</span>
+    <span class="hero-badge">C# / .NET</span>
+    <span class="hero-badge">Docker</span>
+    <span class="hero-badge">SuperMap GIS</span>
+    <span class="hero-badge">IA & Robotique</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats">
+  <div class="stats-grid">
+    <div class="reveal"><div class="stat-number">50k+</div><div class="stat-label">utilisateurs simultanés</div></div>
+    <div class="reveal"><div class="stat-number">−50%</div><div class="stat-label">délais de déploiement</div></div>
+    <div class="reveal"><div class="stat-number">−60%</div><div class="stat-label">temps d'exécution SQL</div></div>
+    <div class="reveal"><div class="stat-number">+25%</div><div class="stat-label">efficacité commerciale</div></div>
+    <div class="reveal"><div class="stat-number">5</div><div class="stat-label">parcours Elera E-Santé</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section-bg">
+  <div class="section-wrap">
+    <div class="section-label">// À PROPOS</div>
+    <h2 class="section-title">Qui <span>suis-je</span> ?</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="reveal">
+      <div>
+        <p style="color:var(--gray);line-height:1.8;margin-bottom:1.25rem;">
+          Développeur passionné basé à Québec, je combine une expertise en architecture logicielle, 
+          développement mobile cross-platform (Flutter, React Native), DevOps et systèmes d'information 
+          géographique (SuperMap GIS). J'ai livré des projets à fort impact pour des clients en Afrique et en Europe, 
+          en télétravail et en présentiel.
+        </p>
+        <p style="color:var(--gray);line-height:1.8;margin-bottom:1.25rem;">
+          Autonome, rigoureux et orienté résultats, j'ai coordonné des équipes techniques en tant que Lead Développeur 
+          chez TINITZ, où j'ai mis en place des standards de qualité, des pipelines CI/CD et migré l'équipe 
+          vers Mindtheos, la solution SaaS interne de gestion d'entreprise.
+        </p>
+        <p style="color:var(--gray);line-height:1.8;">
+          Admis au <strong style="color:var(--navy)">DESS en Intelligence Artificielle</strong> à l'Université Laval 
+          (début sept. 2026), je construis une vision centrée sur la convergence entre l'IA, la cybersécurité et la robotique.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
+          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">FORMATION</div>
+          <div style="font-size:0.875rem;color:var(--gray);">DESS Intelligence Artificielle — Université Laval (sept. 2026)<br/>Bac. Génie Logiciel — Université d'Abomey-Calavi (2017–2020)</div>
+        </div>
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
+          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">LOCALISATION</div>
+          <div style="font-size:0.875rem;color:var(--gray);">Québec, Canada G1V 0A7<br/>Disponible immédiatement · Présentiel ou télétravail</div>
+        </div>
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
+          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">LANGUES</div>
+          <div style="font-size:0.875rem;color:var(--gray);">Français (maternel) · Anglais fonctionnel</div>
+        </div>
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
+          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">CONTACT</div>
+          <div style="font-size:0.875rem;color:var(--gray);">moseswisegit@gmail.com<br/>+1 514 809 3207</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills">
+  <div class="section-wrap">
+    <div class="section-label">// COMPÉTENCES</div>
+    <h2 class="section-title">Stack <span>technique</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-title">LANGAGES</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PHP</span><span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span><span class="skill-tag">C#</span>
+          <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Dart</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">FRAMEWORKS & MOBILE</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Laravel</span><span class="skill-tag">ASP.NET Core</span>
+          <span class="skill-tag">React</span><span class="skill-tag">React Native</span>
+          <span class="skill-tag">Flutter</span><span class="skill-tag">GetX</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">BASES DE DONNÉES</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">SQL Server</span><span class="skill-tag">Redis</span>
+          <span class="skill-tag">SQLite</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">DEVOPS & INFRA</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span><span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">GitHub Actions</span><span class="skill-tag">Linux</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">SIG & CARTOGRAPHIE</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SuperMap GIS</span><span class="skill-tag">SuperGeo</span>
+          <span class="skill-tag">Web GIS</span><span class="skill-tag">Données géospatiales</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title">MÉTHODOLOGIES</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Agile / Scrum</span><span class="skill-tag">REST API</span>
+          <span class="skill-tag">JWT</span><span class="skill-tag">Webhooks</span>
+          <span class="skill-tag">Merise</span><span class="skill-tag">UML</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section-bg">
+  <div class="section-wrap">
+    <div class="section-label">// PROJETS</div>
+    <h2 class="section-title">Réalisations <span>marquantes</span></h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">🏥</div>
+          <span class="project-badge wip">En cours — Québec</span>
+        </div>
+        <div class="project-name">Elera E-Santé</div>
+        <div class="project-desc">Plateforme de santé numérique Flutter/GetX réunissant 5 parcours utilisateurs dans une seule architecture.</div>
+        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
+        <div class="project-details">
+          <ul>
+            <li>5 parcours complets : médecin, pharmacien, patient, livreur et administrateur</li>
+            <li>Authentification OTP sécurisée</li>
+            <li>Gestion des ordonnances et suivi des interactions médicamenteuses</li>
+            <li>Tableaux de bord en temps réel par rôle</li>
+            <li>Architecture orientée sécurité pour données de santé sensibles</li>
+            <li>Synchronisation offline/online des données patients</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="project-tag">Flutter</span><span class="project-tag">GetX</span>
+          <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span>
+          <span class="project-tag">API REST</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">👗</div>
+          <span class="project-badge wip">En cours</span>
+        </div>
+        <div class="project-name"><a href="https://couturioshop.com" target="_blank" style="color:var(--navy);text-decoration:none;">CouturioShop ↗</a></div>
+        <div class="project-desc">Marketplace de mode africaine avec paiements mobiles intégrés et module IA de scan corporel.</div>
+        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
+        <div class="project-details">
+          <ul>
+            <li>Marketplace multi-vendeurs Laravel + Flutter</li>
+            <li>Paiements mobiles intégrés : Wave, Orange Money, MTN Money</li>
+            <li>Module IA de scan corporel pour génération automatique des mesures client (Python)</li>
+            <li>Gestion des commandes, catalogue produits et messagerie vendeur/acheteur</li>
+            <li>Application mobile cross-platform iOS/Android</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="project-tag">Laravel</span><span class="project-tag">Flutter</span>
+          <span class="project-tag">Python</span><span class="project-tag">MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">📊</div>
+          <span class="project-badge">Production</span>
+        </div>
+        <div class="project-name">Sondny</div>
+        <div class="project-desc">Plateforme de sondage électoral haute disponibilité supportant 50 000+ utilisateurs simultanés.</div>
+        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
+        <div class="project-details">
+          <ul>
+            <li>Questionnaires dynamiques configurables par campagne électorale</li>
+            <li>Collecte et analyse des réponses en temps réel</li>
+            <li>Tableaux de bord de résultats et exports de rapports</li>
+            <li>Architecture distribuée avec load balancing et cache Redis</li>
+            <li>Support de 50 000+ utilisateurs simultanés sans interruption</li>
+            <li>Optimisation SQL (EXPLAIN, index composites) : −60% temps d'exécution</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="project-tag">Laravel</span><span class="project-tag">React</span>
+          <span class="project-tag">Redis</span><span class="project-tag">MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">📱</div>
+          <span class="project-badge">Production — TINITZ</span>
+        </div>
+        <div class="project-name">TTQ & TDisplay</div>
+        <div class="project-desc">Deux applications mobiles Flutter déployées sur bornes Android chez TINITZ.</div>
+        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
+        <div class="project-details">
+          <ul>
+            <li><strong>TTQ</strong> : gestion d'événements avec accueil des participants et formulaires d'inscription</li>
+            <li>Système de vote électronique avec affichage des résultats en temps réel</li>
+            <li>Journaux d'activité et paiements mobiles intégrés</li>
+            <li><strong>TDisplay</strong> : diffusion en boucle de présentations images et vidéos</li>
+            <li>Gestion du contenu à distance via API REST</li>
+            <li>Déployées sur bornes Android en environnement de production</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="project-tag">Flutter</span><span class="project-tag">Dart</span>
+          <span class="project-tag">API REST</span><span class="project-tag">Android</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">🗺️</div>
+          <span class="project-badge">Gouvernemental</span>
+        </div>
+        <div class="project-name"><a href="http://siss.geoportailsst.com/partenaires/Userfournisseurs" target="_blank" style="color:var(--navy);text-decoration:none;">DGIR & SISS ↗</a></div>
+        <div class="project-desc">Systèmes d'information géospatiale développés au CNTIG, organisme gouvernemental ivoirien.</div>
+        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
+        <div class="project-details">
+          <ul>
+            <li>Développement et maintenance de l'application DGIR (gestion de données géospatiales)</li>
+            <li>Plateforme SISS accessible sur siss.geoportailsst.com</li>
+            <li>Intégration de couches cartographiques avec SuperMap GIS</li>
+            <li>Visualisation et analyse de données spatiales 2D/3D</li>
+            <li>Usage gouvernemental à l'échelle nationale</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="project-tag">C#</span><span class="project-tag">SuperMap GIS</span>
+          <span class="project-tag">SuperGeo</span><span class="project-tag">SQL Server</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">🧠</div>
+          <span class="project-badge">Production — TINITZ</span>
+        </div>
+        <div class="project-name"><a href="https://mindtheos.com" target="_blank" style="color:var(--navy);text-decoration:none;">Mindtheos ↗</a></div>
+        <div class="project-desc">Plateforme SaaS de pilotage d'entreprise développée par TINITZ, intégrant finance, ventes, projets, RH, stocks et IA managériale.</div>
+        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
+        <div class="project-details">
+          <ul>
+            <li>Participation au développement frontend et backend de la plateforme SaaS</li>
+            <li>Modules : gestion de projets, finance, ventes, RH, stocks et IA intégrée</li>
+            <li>Migration de l'outil de gestion d'équipe de Slack vers Mindtheos en interne</li>
+            <li>Déploiement et maintenance sur infrastructure Linux</li>
+            <li>Utilisé en production par l'équipe TINITZ pour le pilotage quotidien de l'entreprise</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="project-tag">Laravel</span><span class="project-tag">React</span>
+          <span class="project-tag">MySQL</span><span class="project-tag">Docker</span>
+          <span class="project-tag">Linux</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-desc">Système ERP multi-modules complet avec pipeline CI/CD et containerisation Docker.</div>
+        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
+        <div class="project-details">
+          <ul>
+            <li>Modules : stocks, facturation, CRM et ressources humaines</li>
+            <li>Analyse des besoins et modélisation de l'architecture en UML</li>
+            <li>Pipeline CI/CD avec GitHub Actions : build, test et déploiement automatisés</li>
+            <li>Containerisation complète Docker (dev, staging, production)</li>
+            <li>Réduction de 50% des délais de déploiement</li>
+            <li>Migration de l'équipe vers Mindtheos (SaaS interne de pilotage d'entreprise)</li>
+          </ul>
+        </div>
+        <div class="project-stack">
+          <span class="project-tag">Laravel</span><span class="project-tag">React</span>
+          <span class="project-tag">Docker</span><span class="project-tag">GitHub Actions</span>
+          <span class="project-tag">MySQL</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div id="experience">
+  <div class="section-wrap">
+    <div class="section-label">// EXPÉRIENCE</div>
+    <h2 class="section-title">Parcours <span>professionnel</span></h2>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Déc. 2024<br/>Avr. 2026</div>
+        <div class="timeline-line"><div class="timeline-dot"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-role">Architecte Logiciel & DevOps | Lead Développeur</div>
+          <div class="timeline-company">TINITZ — Abidjan, Côte d'Ivoire</div>
+          <div class="timeline-desc">Lead développeur de l'équipe technique sur des projets web, mobile et ERP en environnement de production.</div>
+          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
+          <ul class="timeline-tasks">
+            <li>Analyse des besoins, modélisation de l'architecture ERP TINITZ en UML et conception de la base de données MySQL</li>
+            <li>Développement multi-modules : stocks, facturation, CRM et RH avec Laravel, React et Docker</li>
+            <li>Mise en place du pipeline CI/CD (GitHub Actions) : réduction de 50% des délais de déploiement</li>
+            <li>Containerisation complète des environnements dev, staging et production avec Docker</li>
+            <li>Développement de TTQ : app mobile Flutter sur bornes Android (événements, vote électronique, paiements)</li>
+            <li>Développement de TDisplay : app Flutter d'affichage événementiel dynamique via API REST</li>
+            <li>Développement et déploiement Linux de sites web institutionnels (aricsolutions.com, tinitz.ci)</li>
+            <li>Coordination technique : standards de codage, revues de code, tests d'intégration</li>
+            <li>Migration de l'équipe de Slack vers Mindtheos (SaaS interne de pilotage d'entreprise)</li>
+          </ul>
+          <div class="timeline-stack">
+            <span class="skill-tag">Flutter</span><span class="skill-tag">Laravel</span>
+            <span class="skill-tag">React</span><span class="skill-tag">Docker</span>
+            <span class="skill-tag">GitHub Actions</span><span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">2022<br/>2024</div>
+        <div class="timeline-line"><div class="timeline-dot"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-role">Analyste Programmeur (Freelance)</div>
+          <div class="timeline-company">TERRAIN.NET — France (télétravail)</div>
+          <div class="timeline-desc">Conception et développement de plateformes web distribuées à fort trafic pour des clients en France.</div>
+          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
+          <ul class="timeline-tasks">
+            <li>Conception et développement de Sondny, plateforme de sondage électoral utilisée lors de campagnes électorales</li>
+            <li>Architecture distribuée avec load balancing et cache Redis : 50 000+ utilisateurs simultanés</li>
+            <li>Optimisation SQL (EXPLAIN, index composites, cache Redis) : réduction de 60% du temps d'exécution</li>
+            <li>CRM terrain sur mesure Laravel/React/MySQL avec filtres dynamiques et visualisations Chart.js : +25% d'efficacité commerciale</li>
+            <li>Architecture offline-first Flutter/SQLite pour environnements à faible connectivité</li>
+            <li>Automatisation des processus de vente via jobs, files d'attente et tâches planifiées Laravel : −30% de tâches manuelles</li>
+          </ul>
+          <div class="timeline-stack">
+            <span class="skill-tag">Laravel</span><span class="skill-tag">React</span>
+            <span class="skill-tag">Redis</span><span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Flutter</span><span class="skill-tag">SQLite</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Fév. 2022<br/>Oct. 2022</div>
+        <div class="timeline-line"><div class="timeline-dot"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-role">Stagiaire Développeur C# & SIG</div>
+          <div class="timeline-company">CNTIG — Comité National de Télédétection et d'Information Géographique, Abidjan</div>
+          <div class="timeline-desc">Stage au sein d'un organisme gouvernemental spécialisé en géomatique, SIG et cartographie.</div>
+          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
+          <ul class="timeline-tasks">
+            <li>Développement et maintenance de l'application DGIR (gestion de données géospatiales gouvernementales)</li>
+            <li>Contribution à la plateforme SISS (siss.geoportailsst.com)</li>
+            <li>Intégration de couches cartographiques avec SuperMap GIS pour la visualisation 2D/3D</li>
+            <li>Perfectionnement en C# appliqué aux systèmes d'information géographique</li>
+            <li>Développement d'applications de cartographie web</li>
+          </ul>
+          <div class="timeline-stack">
+            <span class="skill-tag">C#</span><span class="skill-tag">SuperMap GIS</span>
+            <span class="skill-tag">SuperGeo</span><span class="skill-tag">SQL Server</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Avr. 2020<br/>Oct. 2020</div>
+        <div class="timeline-line"><div class="timeline-dot"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-role">Analyste Programmeur</div>
+          <div class="timeline-company">La Poste du Bénin — Cotonou, Bénin</div>
+          <div class="timeline-desc">Développement d'une application de gestion de courrier et de stock pour l'entreprise postale nationale.</div>
+          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
+          <ul class="timeline-tasks">
+            <li>Analyse des besoins métier et modélisation Merise (MCD/MLD)</li>
+            <li>Développement de l'application en C# et SQL Server</li>
+            <li>Gestion des courriers entrants/sortants et suivi des stocks</li>
+            <li>Tests, recette et formation des utilisateurs</li>
+          </ul>
+          <div class="timeline-stack">
+            <span class="skill-tag">C#</span><span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">Merise</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact-section">
+  <div class="contact-inner reveal">
+    <div class="section-label" style="justify-content:center;display:flex;color:rgba(245,158,11,0.8);">// CONTACT</div>
+    <h2 class="contact-title">Travaillons <span style="color:var(--amber2)">ensemble</span></h2>
+    <p class="contact-desc">Disponible immédiatement pour un poste en présentiel à Québec ou en télétravail. N'hésitez pas à me contacter.</p>
+    <div class="contact-links">
+      <a href="mailto:moseswisegit@gmail.com" class="btn btn-contact-primary">✉ moseswisegit@gmail.com</a>
+      <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" class="btn btn-contact-outline">LinkedIn</a>
+      <a href="https://github.com/moseswisegit" target="_blank" class="btn btn-contact-outline">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span style="color:rgba(245,158,11,0.6)">Moïse Innocent Agbossaga</span> · Québec, Canada · 2026
+</footer>
+
+<script>
+// Typing animation
+const titles = [
+  "Architecte Logiciel & DevOps",
+  "Développeur Full Stack & Mobile",
+  "Flutter · Laravel · React · C#",
+  "SIG · IA · Robotique"
+];
+let ti = 0, ci = 0, deleting = false;
+const el = document.getElementById('typed-title');
+function type() {
+  const cur = titles[ti];
+  if (!deleting) {
+    el.innerHTML = cur.slice(0,ci+1)+'<span class="cursor"></span>';
+    ci++;
+    if(ci===cur.length){deleting=true;setTimeout(type,2000);return;}
+  } else {
+    el.innerHTML = cur.slice(0,ci-1)+'<span class="cursor"></span>';
+    ci--;
+    if(ci===0){deleting=false;ti=(ti+1)%titles.length;}
+  }
+  setTimeout(type,deleting?40:80);
+}
+type();
+
+// Toggle project details
+function toggleDetails(btn) {
+  const details = btn.nextElementSibling;
+  const open = details.classList.toggle('open');
+  btn.textContent = open ? '▼ Voir moins' : '▶ Voir plus';
+}
+
+// Toggle experience tasks
+function toggleTasks(btn) {
+  const tasks = btn.nextElementSibling;
+  const open = tasks.classList.toggle('open');
+  btn.textContent = open ? '▼ Masquer les tâches' : '▶ Voir les tâches';
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
