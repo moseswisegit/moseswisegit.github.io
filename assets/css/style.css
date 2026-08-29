@@ -99,10 +99,16 @@ nav {
 
 .hero-inner { display:flex; align-items:center; justify-content:space-between; gap:4rem; }
 .hero-content { flex:1 1 480px; min-width:0; }
-.hero-photo { flex:0 0 auto; }
+.hero-photo { flex:0 0 auto; position:relative; }
+.hero-photo::before {
+  content:''; position:absolute; inset:-1.25rem;
+  background:radial-gradient(circle at 30% 20%, rgba(26,111,168,0.16), transparent 70%);
+  border-radius:1.75rem; z-index:0;
+}
 .hero-photo img {
-  display:block; width:260px; height:auto; aspect-ratio:466/700;
-  object-fit:cover; border-radius:1.25rem;
+  position:relative; z-index:1;
+  display:block; width:250px; height:auto; aspect-ratio:466/700;
+  object-fit:cover; object-position:center 15%; border-radius:1.25rem;
   border:3px solid var(--white); box-shadow:0 20px 50px rgba(11,17,32,0.15);
   background:var(--bg2);
 }
