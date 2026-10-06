@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1791319134013,
+  "projectRoot": "/Users/mac/DOSSIER_MOSES/MOSESWISE/moseswisegit.github.io",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1791319134005,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "index.html",
+      "accessCount": 5,
+      "lastAccessed": 1791323641721,
+      "type": "file"
+    },
+    {
+      "path": "assets/css/style.css",
+      "accessCount": 3,
+      "lastAccessed": 1791323793993,
+      "type": "file"
+    },
+    {
+      "path": "assets/js/main.js",
+      "accessCount": 2,
+      "lastAccessed": 1791323725997,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 2,
+      "lastAccessed": 1791324175666,
+      "type": "file"
+    },
+    {
+      "path": "cv/CV_Agbossaga_Moise_Final.pdf",
+      "accessCount": 1,
+      "lastAccessed": 1791322897175,
+      "type": "file"
+    },
+    {
+      "path": "assets/img/ulconnect/04-etude-partenaires.webp",
+      "accessCount": 1,
+      "lastAccessed": 1791323343534,
+      "type": "file"
+    },
+    {
+      "path": "assets/img/ulconnect/06-horaire.webp",
+      "accessCount": 1,
+      "lastAccessed": 1791323344136,
+      "type": "file"
+    },
+    {
+      "path": "assets/img/ulconnect/12-mode-sombre.webp",
+      "accessCount": 1,
+      "lastAccessed": 1791323344752,
+      "type": "file"
+    },
+    {
+      "path": "assets/img/favicon.svg",
+      "accessCount": 1,
+      "lastAccessed": 1791323726536,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

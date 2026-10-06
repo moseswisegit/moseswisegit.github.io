@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"curl -sI https://moseswisegit.github.io/ | grep -iE \\\"^HTTP|^location|^server\\\"; echo ---; gh api repos/moseswisegit/moseswisegit.github.io/pages 2>&1 | head -30; echo ---; cd /Users/mac/D...",
+  "error": "Exit code 1\nHTTP/2 301 \r\nserver: GitHub.com\r\nlocation: http://ulconnect.me/\r\n---\n{\"url\":\"https://api.github.com/repos/moseswisegit/moseswisegit.github.io/pages\",\"status\":\"built\",\"cname\":\"ulconnect.me\",\"custom_404\":false,\"html_url\":\"http://ulconnect.me/\",\"build_type\":\"legacy\",\"source\":{\"branch\":\"main\",\"path\":\"/\"},\"public\":true,\"protected_domain_state\":null,\"pending_domain_unverified_at\":null,\"https_enforced\":false}---\norigin\tgit@github.com:moseswisegit/moseswisegit.github.io.git (fetch)\norigin\tgi...",
+  "timestamp": "2026-10-06T21:26:00.758Z",
+  "retry_count": 1
+}
