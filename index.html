@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Moïse Innocent Agbossaga | Développeur logiciel Full Stack, Cloud et IA</title>
 <meta name="description" content="Développeur logiciel full stack, mobile et DevOps à Québec, étudiant au DESS en intelligence artificielle à l'Université Laval. Applications déployées sur Azure avec Docker, CI/CD et tests automatisés."/>
 <meta name="author" content="Moïse Innocent Agbossaga"/>
-<meta name="theme-color" content="#0B1120"/>
+<meta name="color-scheme" content="light dark"/>
+<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"/>
+<meta name="theme-color" content="#141518" media="(prefers-color-scheme: dark)"/>
 <link rel="canonical" href="https://moseswisegit.github.io/"/>
 
 <meta property="og:type" content="profile"/>
@@ -17,7 +19,7 @@
 <meta property="og:image" content="https://moseswisegit.github.io/assets/img/moise.jpg"/>
 <meta property="og:image:width" content="466"/>
 <meta property="og:image:height" content="700"/>
-<meta property="og:image:alt" content="Photo de Moïse Innocent Agbossaga"/>
+<meta property="og:image:alt" content="Portrait de Moïse Innocent Agbossaga"/>
 <meta property="og:locale" content="fr_CA"/>
 <meta property="profile:first_name" content="Moïse Innocent"/>
 <meta property="profile:last_name" content="Agbossaga"/>
@@ -26,452 +28,473 @@
 <meta name="twitter:title" content="Moïse Innocent Agbossaga | Développeur logiciel Full Stack, Cloud et IA"/>
 <meta name="twitter:description" content="Développeur logiciel full stack, mobile et DevOps à Québec. Applications déployées sur Azure avec Docker, CI/CD et tests automatisés."/>
 <meta name="twitter:image" content="https://moseswisegit.github.io/assets/img/moise.jpg"/>
+<meta name="twitter:image:alt" content="Portrait de Moïse Innocent Agbossaga"/>
 
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
-<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="assets/css/style.css"/>
-<script>document.documentElement.classList.add('js');</script>
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t); } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Moïse Innocent Agbossaga",
+  "jobTitle": "Développeur logiciel | Full Stack, Cloud et IA",
+  "url": "https://moseswisegit.github.io/",
+  "image": "https://moseswisegit.github.io/assets/img/moise.jpg",
+  "email": "mailto:moseswisegit@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Québec", "addressRegion": "QC", "addressCountry": "CA" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Université Laval" },
+    { "@type": "CollegeOrUniversity", "name": "Université d'Abomey-Calavi" }
+  ],
+  "knowsAbout": ["Azure", "Docker", "CI/CD", "ASP.NET Core", "React Native", "PostgreSQL", "MLOps"],
+  "sameAs": ["https://linkedin.com/in/moise-agbossaga", "https://github.com/moseswisegit"]
+}
+</script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Aller au contenu</a>
 
-<header>
-  <nav aria-label="Navigation principale">
-    <a href="#hero" class="nav-logo" aria-label="MA. Retour en haut de page">MA<span aria-hidden="true">.</span></a>
-    <button type="button" class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#ulconnect">ULconnect</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#experience">Expérience</a></li>
-      <li><a href="#education">Formation</a></li>
-      <li><a href="#ai-path">Parcours IA</a></li>
-      <li><a href="#contact-section">Contact</a></li>
-    </ul>
-  </nav>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand">Moïse Agbossaga</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#ulconnect">ULconnect</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#parcours-ia">Parcours IA</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="icon-btn theme-toggle" id="themeToggle" aria-label="Activer le thème sombre">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
 </header>
 
 <main id="main">
 
 <!-- HERO -->
-<section id="hero" aria-labelledby="hero-name">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Québec, Canada · Résident permanent</p>
-      <h1 class="hero-name" id="hero-name">Moïse Innocent<br/><span>Agbossaga</span></h1>
-      <p class="hero-title">Développeur logiciel | Full Stack, Cloud et IA<span class="cursor" aria-hidden="true"></span></p>
-      <p class="hero-desc">
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Québec, Canada · Résident permanent</p>
+      <h1 class="hero-name" id="hero-title">Moïse Innocent Agbossaga</h1>
+      <p class="hero-role">Développeur logiciel | Full Stack, Cloud et IA</p>
+      <p class="hero-lead">
         Développeur logiciel spécialisé en full stack, mobile et DevOps, étudiant au DESS en intelligence artificielle
         à l'Université Laval. Je conçois et déploie des applications sur Azure avec Docker, CI/CD et tests automatisés.
-        Mon objectif de carrière : devenir développeur en apprentissage automatique (MLOps) et mettre des modèles d'IA en production.
       </p>
-      <div class="hero-cta">
-        <a href="cv/CV_Agbossaga_Moise_Final.pdf" download class="btn btn-primary"><span aria-hidden="true">📄</span> Télécharger mon CV</a>
-        <a href="#contact-section" class="btn btn-outline">Me contacter</a>
-        <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
-        <a href="https://github.com/moseswisegit" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      <div class="hero-actions">
+        <a href="#ulconnect" class="btn btn-primary">Voir ULconnect</a>
+        <a href="cv/CV_Agbossaga_Moise_Final.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
       </div>
-      <ul class="hero-badges">
-        <li class="hero-badge">Azure</li>
-        <li class="hero-badge">Docker</li>
-        <li class="hero-badge">GitHub Actions</li>
-        <li class="hero-badge">ASP.NET Core 8</li>
-        <li class="hero-badge">React Native</li>
-        <li class="hero-badge">PostgreSQL</li>
+      <ul class="hero-links">
+        <li><a class="link" href="https://linkedin.com/in/moise-agbossaga" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="link" href="https://github.com/moseswisegit" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="link" href="mailto:moseswisegit@gmail.com">Courriel</a></li>
       </ul>
     </div>
     <div class="hero-photo">
       <picture>
-        <source srcset="assets/img/moise-340.webp 340w, assets/img/moise.webp 466w" sizes="(max-width: 900px) 170px, 250px" type="image/webp"/>
+        <source srcset="assets/img/moise-280.webp 280w, assets/img/moise-340.webp 340w, assets/img/moise.webp 466w" sizes="(max-width: 767px) 132px, 280px" type="image/webp"/>
         <img src="assets/img/moise.jpg" alt="Portrait de Moïse Innocent Agbossaga" width="466" height="700" fetchpriority="high" decoding="async"/>
       </picture>
     </div>
   </div>
 </section>
 
-<!-- ULCONNECT -->
-<section id="ulconnect" class="section-bg" aria-labelledby="ulconnect-title">
-  <div class="section-wrap">
-    <p class="section-label">// Projet principal</p>
-    <h2 class="section-title" id="ulconnect-title">UL<span>connect</span></h2>
+<!-- 01 · ULCONNECT -->
+<section class="section" id="ulconnect" aria-labelledby="ulconnect-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-num">01 · Projet principal</p>
+      <h2 class="section-title" id="ulconnect-title">ULconnect</h2>
+    </header>
 
-    <article class="feature-card reveal">
-      <div class="feature-head">
-        <p class="feature-desc">
-          Plateforme pour les étudiants de l'Université Laval. L'application mobile est en validation sur Google Play.
-          L'API et la console d'administration sont déployées sur Azure.
-        </p>
-        <span class="project-badge wip">En validation sur Google Play</span>
+    <article class="feature reveal">
+      <div class="feature-intro">
+        <div>
+          <p class="status">En validation sur Google Play</p>
+          <p class="feature-lead">
+            Plateforme pour les étudiants de l'Université Laval. L'application mobile est en validation sur Google Play.
+            L'API et la console d'administration sont déployées sur Azure.
+          </p>
+        </div>
+        <dl class="stats">
+          <div class="stat"><dt>Écrans mobiles</dt><dd>63</dd></div>
+          <div class="stat"><dt>Routes API</dt><dd>244</dd></div>
+          <div class="stat"><dt>Tables PostgreSQL</dt><dd>55</dd></div>
+          <div class="stat"><dt>Tests automatisés</dt><dd><span class="approx">env.</span> 450</dd></div>
+        </dl>
       </div>
 
-      <dl class="feature-stats">
-        <div><dt>Écrans mobiles</dt><dd>63</dd></div>
-        <div><dt>Routes API</dt><dd>244</dd></div>
-        <div><dt>Tables PostgreSQL</dt><dd>55</dd></div>
-        <div><dt>Tests automatisés</dt><dd>~450</dd></div>
-      </dl>
+      <div class="feature-body">
+        <dl class="specs">
+          <div><dt>Application mobile</dt><dd>React Native (Expo) et TypeScript, 63 écrans.</dd></div>
+          <div><dt>API</dt><dd>ASP.NET Core 8 : 244 routes, 48 contrôleurs, SignalR pour le temps réel, PostgreSQL (55 tables, 34 migrations).</dd></div>
+          <div><dt>Infrastructure Azure</dt><dd>API conteneurisée avec Docker sur Azure App Service, console React 19 / Vite sur Azure Static Web Apps, Blob Storage, Cloudflare (SSL), envoi de courriels avec Brevo (DKIM/DMARC).</dd></div>
+          <div><dt>CI/CD et tests</dt><dd>GitHub Actions (build, tests, déploiement). Environ 450 tests automatisés : 431 côté API, 31 côté mobile.</dd></div>
+          <div><dt>Sécurité et conformité</dt><dd>JWT, double authentification, limitation de débit, conformité à la Loi 25.</dd></div>
+          <div><dt>Administration</dt><dd>Console avec 6 rôles, abonnement géré par feature flag. Tests de charge à 2&nbsp;000 inscriptions par minute, réalisés en local.</dd></div>
+        </dl>
 
-      <div class="feature-grid">
-        <div class="feature-block">
-          <h3>Application mobile</h3>
-          <p>React Native (Expo) et TypeScript, 63 écrans.</p>
-        </div>
-        <div class="feature-block">
-          <h3>API</h3>
-          <p>ASP.NET Core 8 : 244 routes, 48 contrôleurs, SignalR pour le temps réel, PostgreSQL (55 tables, 34 migrations).</p>
-        </div>
-        <div class="feature-block">
-          <h3>Infrastructure Azure</h3>
-          <p>API conteneurisée avec Docker sur Azure App Service, console React 19 / Vite sur Azure Static Web Apps, Blob Storage, Cloudflare (SSL), envoi de courriels avec Brevo (DKIM/DMARC).</p>
-        </div>
-        <div class="feature-block">
-          <h3>CI/CD et tests</h3>
-          <p>GitHub Actions (build, tests, déploiement). Environ 450 tests automatisés : 431 côté API, 31 côté mobile.</p>
-        </div>
-        <div class="feature-block">
-          <h3>Sécurité et conformité</h3>
-          <p>JWT, double authentification, limitation de débit, conformité à la Loi 25.</p>
-        </div>
-        <div class="feature-block">
-          <h3>Administration</h3>
-          <p>Console avec 6 rôles, abonnement géré par feature flag. Tests de charge à 2&nbsp;000 inscriptions par minute, réalisés en local.</p>
-        </div>
+        <figure class="arch">
+          <figcaption class="label">Architecture</figcaption>
+          <svg class="arch-svg" viewBox="0 0 320 326" role="img" aria-labelledby="arch-title arch-desc">
+            <title id="arch-title">Architecture d'ULconnect</title>
+            <desc id="arch-desc">L'application mobile et la console d'administration passent par Cloudflare (SSL) pour joindre l'API ASP.NET Core 8, conteneurisée avec Docker sur Azure App Service. GitHub Actions construit, teste et déploie. L'API utilise PostgreSQL, Blob Storage et Brevo pour les courriels.</desc>
+            <defs>
+              <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path class="a-head" d="M0 0 8 4 0 8z"/>
+              </marker>
+            </defs>
+            <rect class="n" x="1" y="1" width="152" height="50" rx="8"/>
+            <text class="t" x="77" y="23">Application mobile</text>
+            <text class="s" x="77" y="40">React Native (Expo)</text>
+            <rect class="n" x="167" y="1" width="152" height="50" rx="8"/>
+            <text class="t" x="243" y="23">Console admin</text>
+            <text class="s" x="243" y="40">React 19 · Static Web Apps</text>
+
+            <path class="a" d="M77 51v34" marker-end="url(#arrow)"/>
+            <path class="a" d="M243 51v34" marker-end="url(#arrow)"/>
+            <text class="s" x="160" y="74">HTTPS · SignalR</text>
+
+            <rect class="n n-dash" x="1" y="90" width="318" height="38" rx="8"/>
+            <text class="t" x="160" y="114">Cloudflare · SSL</text>
+
+            <path class="a" d="M110 128v32" marker-end="url(#arrow)"/>
+
+            <rect class="n n-accent" x="1" y="165" width="204" height="56" rx="8"/>
+            <text class="t" x="103" y="189">API ASP.NET Core 8</text>
+            <text class="s" x="103" y="207">Docker · Azure App Service</text>
+            <rect class="n" x="219" y="165" width="100" height="56" rx="8"/>
+            <text class="t" x="269" y="189">GitHub Actions</text>
+            <text class="s" x="269" y="207">CI/CD</text>
+            <path class="a a-dash" d="M219 193h-11" marker-end="url(#arrow)"/>
+
+            <path class="a" d="M53 221v42" marker-end="url(#arrow)"/>
+            <path class="a" d="M103 221v42" marker-end="url(#arrow)"/>
+            <path class="a" d="M153 221q0 20 113 42" marker-end="url(#arrow)"/>
+
+            <rect class="n" x="1" y="268" width="100" height="56" rx="8"/>
+            <text class="t" x="51" y="292">PostgreSQL</text>
+            <text class="s" x="51" y="310">55 tables</text>
+            <rect class="n" x="110" y="268" width="100" height="56" rx="8"/>
+            <text class="t" x="160" y="292">Blob Storage</text>
+            <text class="s" x="160" y="310">Fichiers</text>
+            <rect class="n" x="219" y="268" width="100" height="56" rx="8"/>
+            <text class="t" x="269" y="292">Brevo</text>
+            <text class="s" x="269" y="310">Courriels</text>
+          </svg>
+        </figure>
       </div>
 
-      <figure class="shots" aria-labelledby="shots-caption">
-        <figcaption id="shots-caption">
-          <span class="arch-caption">Aperçu des écrans</span>
-          <span class="shots-note">Maquettes de conception réalisées avec Claude Design, qui ont servi de référence à l'implémentation. Noms, messages et chiffres fictifs.</span>
+      <figure class="gallery">
+        <figcaption>
+          <span class="label">Captures d'écran</span>
+          <span class="gallery-note">Maquettes de conception réalisées avec Claude Design, qui ont servi de référence à l'implémentation. Noms, messages et chiffres fictifs.</span>
         </figcaption>
-        <ul class="shots-phones">
-          <li><img src="assets/img/ulconnect/03-accueil.webp" alt="Accueil : carte Rencontre avec photos floutées et carte Étude avec les partenaires libres" width="390" height="844" loading="lazy" decoding="async"/></li>
-          <li><img src="assets/img/ulconnect/04-etude-partenaires.webp" alt="Étude, onglet Partenaires : étudiants disponibles dans les mêmes cours" width="390" height="844" loading="lazy" decoding="async"/></li>
-          <li><img src="assets/img/ulconnect/06-horaire.webp" alt="Mon horaire : cours et créneaux libres transformés en disponibilités" width="390" height="844" loading="lazy" decoding="async"/></li>
-          <li><img src="assets/img/ulconnect/07-communaute.webp" alt="Communauté : logement, dons, emplois, événements, objets perdus et boîte à suggestions" width="390" height="844" loading="lazy" decoding="async"/></li>
-          <li><img src="assets/img/ulconnect/09-conversation.webp" alt="Conversation en temps réel avec mode flou des photos" width="390" height="844" loading="lazy" decoding="async"/></li>
-          <li><img src="assets/img/ulconnect/12-mode-sombre.webp" alt="Accueil en mode sombre" width="390" height="844" loading="lazy" decoding="async"/></li>
+        <ul class="phones" tabindex="0" aria-label="Écrans de l'application mobile, défilement horizontal sur petit écran">
+          <li class="phone"><img src="assets/img/ulconnect/03-accueil.webp" srcset="assets/img/ulconnect/03-accueil-220.webp 220w, assets/img/ulconnect/03-accueil.webp 390w" sizes="(max-width: 767px) 200px, (max-width: 1023px) 30vw, 160px" alt="Accueil : carte Rencontre avec photos floutées et carte Étude avec les partenaires libres" width="390" height="844" loading="lazy" decoding="async"/></li>
+          <li class="phone"><img src="assets/img/ulconnect/04-etude-partenaires.webp" srcset="assets/img/ulconnect/04-etude-partenaires-220.webp 220w, assets/img/ulconnect/04-etude-partenaires.webp 390w" sizes="(max-width: 767px) 200px, (max-width: 1023px) 30vw, 160px" alt="Étude, onglet Partenaires : étudiants disponibles dans les mêmes cours" width="390" height="844" loading="lazy" decoding="async"/></li>
+          <li class="phone"><img src="assets/img/ulconnect/06-horaire.webp" srcset="assets/img/ulconnect/06-horaire-220.webp 220w, assets/img/ulconnect/06-horaire.webp 390w" sizes="(max-width: 767px) 200px, (max-width: 1023px) 30vw, 160px" alt="Mon horaire : cours et créneaux libres transformés en disponibilités" width="390" height="844" loading="lazy" decoding="async"/></li>
+          <li class="phone"><img src="assets/img/ulconnect/07-communaute.webp" srcset="assets/img/ulconnect/07-communaute-220.webp 220w, assets/img/ulconnect/07-communaute.webp 390w" sizes="(max-width: 767px) 200px, (max-width: 1023px) 30vw, 160px" alt="Communauté : logement, dons, emplois, événements, objets perdus et boîte à suggestions" width="390" height="844" loading="lazy" decoding="async"/></li>
+          <li class="phone"><img src="assets/img/ulconnect/09-conversation.webp" srcset="assets/img/ulconnect/09-conversation-220.webp 220w, assets/img/ulconnect/09-conversation.webp 390w" sizes="(max-width: 767px) 200px, (max-width: 1023px) 30vw, 160px" alt="Conversation en temps réel avec mode flou des photos" width="390" height="844" loading="lazy" decoding="async"/></li>
+          <li class="phone"><img src="assets/img/ulconnect/12-mode-sombre.webp" srcset="assets/img/ulconnect/12-mode-sombre-220.webp 220w, assets/img/ulconnect/12-mode-sombre.webp 390w" sizes="(max-width: 767px) 200px, (max-width: 1023px) 30vw, 160px" alt="Accueil en mode sombre" width="390" height="844" loading="lazy" decoding="async"/></li>
         </ul>
-        <img class="shots-console" src="assets/img/ulconnect/13-console-moderation.webp" alt="Console d'administration : file de modération des signalements, noms floutés" width="1200" height="750" loading="lazy" decoding="async"/>
-      </figure>
-
-      <figure class="arch" aria-labelledby="arch-caption">
-        <figcaption id="arch-caption" class="arch-caption">Architecture</figcaption>
-        <div class="arch-flow">
-          <div class="arch-row arch-row-2">
-            <div class="arch-node"><strong>Application mobile</strong><span>React Native (Expo)</span></div>
-            <div class="arch-node"><strong>Console d'administration</strong><span>React 19 / Vite · Static Web Apps</span></div>
-          </div>
-          <div class="arch-arrow" aria-hidden="true"><span>HTTPS · SignalR</span></div>
-          <div class="arch-row">
-            <div class="arch-node arch-edge"><strong>Cloudflare</strong><span>SSL</span></div>
-          </div>
-          <div class="arch-arrow" aria-hidden="true"></div>
-          <div class="arch-row arch-row-api">
-            <div class="arch-node arch-core"><strong>API ASP.NET Core 8</strong><span>Docker · Azure App Service</span></div>
-            <div class="arch-node arch-ci"><strong>GitHub Actions</strong><span>Build, tests, déploiement</span></div>
-          </div>
-          <div class="arch-arrow" aria-hidden="true"></div>
-          <div class="arch-row arch-row-3">
-            <div class="arch-node"><strong>PostgreSQL</strong><span>55 tables</span></div>
-            <div class="arch-node"><strong>Blob Storage</strong><span>Fichiers</span></div>
-            <div class="arch-node"><strong>Brevo</strong><span>Courriels</span></div>
-          </div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+          <img src="assets/img/ulconnect/13-console-moderation.webp" srcset="assets/img/ulconnect/13-console-moderation-640.webp 640w, assets/img/ulconnect/13-console-moderation.webp 1200w" sizes="(max-width: 1120px) 92vw, 1030px" alt="Console d'administration : file de modération des signalements, noms floutés" width="1200" height="750" loading="lazy" decoding="async"/>
         </div>
       </figure>
 
-      <ul class="project-stack">
-        <li class="project-tag">React Native</li><li class="project-tag">TypeScript</li>
-        <li class="project-tag">ASP.NET Core 8</li><li class="project-tag">SignalR</li>
-        <li class="project-tag">PostgreSQL</li><li class="project-tag">Docker</li>
-        <li class="project-tag">Azure</li><li class="project-tag">GitHub Actions</li>
-      </ul>
-
-      <div class="feature-actions">
-        <a href="https://github.com/moseswisegit/ulconnect-showcase" target="_blank" rel="noopener" class="btn btn-outline">Voir ULconnect sur GitHub</a>
+      <div class="feature-foot">
+        <ul class="tags">
+          <li>React Native</li><li>TypeScript</li><li>ASP.NET Core 8</li><li>SignalR</li>
+          <li>PostgreSQL</li><li>Docker</li><li>Azure</li><li>GitHub Actions</li>
+        </ul>
+        <!-- Présentation technique : dépôt vitrine public (le code de l'application reste privé).
+             Pour masquer ce bouton, ajouter l'attribut hidden sur la balise <a>. -->
+        <a href="https://github.com/moseswisegit/ulconnect-showcase" class="btn btn-secondary" target="_blank" rel="noopener">Voir la présentation technique</a>
       </div>
     </article>
   </div>
 </section>
 
-<!-- AUTRES PROJETS -->
-<section id="projects" aria-labelledby="projects-title">
-  <div class="section-wrap">
-    <p class="section-label">// Projets</p>
-    <h2 class="section-title" id="projects-title">Autres <span>projets</span></h2>
-    <div class="projects-grid">
-      <article class="project-card reveal">
-        <div class="project-header">
-          <h3 class="project-name">CouturioShop</h3>
-          <span class="project-badge wip">En développement</span>
-        </div>
-        <p class="project-desc">Marketplace de mode africaine. Co-fondateur et architecte technique.</p>
-        <ul class="project-details">
-          <li>Laravel et Flutter</li>
-          <li>Paiements mobiles : Wave, Orange Money, MTN</li>
-          <li>Module IA de scan corporel en cours de conception (Python, en formation)</li>
-        </ul>
-        <ul class="project-stack">
-          <li class="project-tag">Laravel</li><li class="project-tag">Flutter</li>
-          <li class="project-tag">Python</li>
-        </ul>
-      </article>
-    </div>
+<!-- 02 · AUTRES PROJETS -->
+<section class="section" id="projets" aria-labelledby="projets-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-num">02 · Projets</p>
+      <h2 class="section-title" id="projets-title">Autres projets</h2>
+    </header>
+    <article class="card project reveal">
+      <div class="card-head">
+        <h3 class="card-title">CouturioShop</h3>
+        <p class="status">En développement</p>
+      </div>
+      <ul class="lines">
+        <li>Marketplace de mode africaine. Co-fondateur et architecte technique.</li>
+        <li>Laravel et Flutter.</li>
+        <li>Paiements mobiles : Wave, Orange Money, MTN.</li>
+        <li>Module IA de scan corporel en cours de conception (Python, en formation).</li>
+      </ul>
+      <ul class="tags">
+        <li>Laravel</li><li>Flutter</li><li>Python</li>
+      </ul>
+    </article>
   </div>
 </section>
 
-<!-- COMPÉTENCES -->
-<section id="skills" class="section-bg" aria-labelledby="skills-title">
-  <div class="section-wrap">
-    <p class="section-label">// Compétences</p>
-    <h2 class="section-title" id="skills-title">Stack <span>technique</span></h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <h3 class="skill-card-title">Cloud et DevOps</h3>
-        <ul class="skill-tags">
-          <li class="skill-tag">Azure App Service</li><li class="skill-tag">Azure Static Web Apps</li>
-          <li class="skill-tag">Azure Blob Storage</li><li class="skill-tag">Azure PostgreSQL</li>
-          <li class="skill-tag">Docker</li><li class="skill-tag">Docker Compose</li>
-          <li class="skill-tag">CI/CD GitHub Actions</li><li class="skill-tag">Linux</li><li class="skill-tag">Git</li>
+<!-- 03 · COMPÉTENCES -->
+<section class="section" id="competences" aria-labelledby="competences-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-num">03 · Compétences</p>
+      <h2 class="section-title" id="competences-title">Compétences</h2>
+    </header>
+    <div class="skills">
+      <div class="card reveal">
+        <h3 class="label">Cloud et DevOps</h3>
+        <ul class="tags">
+          <li>Azure App Service</li><li>Azure Static Web Apps</li><li>Azure Blob Storage</li><li>Azure PostgreSQL</li>
+          <li>Docker</li><li>Docker Compose</li><li>CI/CD GitHub Actions</li><li>Linux</li><li>Git</li>
         </ul>
       </div>
-      <div class="skill-card reveal">
-        <h3 class="skill-card-title">Infrastructure et sécurité</h3>
-        <ul class="skill-tags">
-          <li class="skill-tag">Cloudflare</li><li class="skill-tag">SSL/HTTPS</li>
-          <li class="skill-tag">JWT</li><li class="skill-tag">Double authentification</li>
-          <li class="skill-tag">Limitation de débit</li>
+      <div class="card reveal">
+        <h3 class="label">Infrastructure et sécurité</h3>
+        <ul class="tags">
+          <li>Cloudflare</li><li>SSL/HTTPS</li><li>JWT</li><li>Double authentification</li><li>Limitation de débit</li>
         </ul>
       </div>
-      <div class="skill-card reveal">
-        <h3 class="skill-card-title">Backend et API</h3>
-        <ul class="skill-tags">
-          <li class="skill-tag">ASP.NET Core 8</li><li class="skill-tag">C#</li>
-          <li class="skill-tag">SignalR</li><li class="skill-tag">Entity Framework</li>
-          <li class="skill-tag">Laravel</li><li class="skill-tag">REST</li>
+      <div class="card reveal">
+        <h3 class="label">Backend et API</h3>
+        <ul class="tags">
+          <li>ASP.NET Core 8</li><li>C#</li><li>SignalR</li><li>Entity Framework</li><li>Laravel</li><li>REST</li>
         </ul>
       </div>
-      <div class="skill-card reveal">
-        <h3 class="skill-card-title">Frontend et mobile</h3>
-        <ul class="skill-tags">
-          <li class="skill-tag">React</li><li class="skill-tag">React Native (Expo)</li>
-          <li class="skill-tag">TypeScript</li><li class="skill-tag">Flutter</li>
-          <li class="skill-tag">Angular</li><li class="skill-tag">HTML/CSS</li>
+      <div class="card reveal">
+        <h3 class="label">Frontend et mobile</h3>
+        <ul class="tags">
+          <li>React</li><li>React Native (Expo)</li><li>TypeScript</li><li>Flutter</li><li>Angular</li><li>HTML/CSS</li>
         </ul>
       </div>
-      <div class="skill-card reveal">
-        <h3 class="skill-card-title">IA</h3>
-        <ul class="skill-tags">
-          <li class="skill-tag">Python</li>
-          <li class="skill-tag">scikit-learn (en apprentissage)</li>
-          <li class="skill-tag">PyTorch (en apprentissage)</li>
-          <li class="skill-tag">Notions de MLOps</li>
+      <div class="card reveal">
+        <h3 class="label">IA</h3>
+        <ul class="tags">
+          <li>Python</li><li>scikit-learn (en apprentissage)</li><li>PyTorch (en apprentissage)</li><li>Notions de MLOps</li>
         </ul>
       </div>
-      <div class="skill-card reveal">
-        <h3 class="skill-card-title">Bases de données et qualité</h3>
-        <ul class="skill-tags">
-          <li class="skill-tag">MySQL</li><li class="skill-tag">PostgreSQL</li>
-          <li class="skill-tag">SQL Server</li><li class="skill-tag">Tests automatisés</li>
-          <li class="skill-tag">Agile</li>
+      <div class="card reveal">
+        <h3 class="label">Bases de données et qualité</h3>
+        <ul class="tags">
+          <li>MySQL</li><li>PostgreSQL</li><li>SQL Server</li><li>Tests automatisés</li><li>Agile</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EXPÉRIENCE -->
-<section id="experience" aria-labelledby="experience-title">
-  <div class="section-wrap">
-    <p class="section-label">// Expérience</p>
-    <h2 class="section-title" id="experience-title">Parcours <span>professionnel</span></h2>
+<!-- 04 · EXPÉRIENCE -->
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-num">04 · Expérience</p>
+      <h2 class="section-title" id="experience-title">Expérience</h2>
+    </header>
     <ol class="timeline">
-      <li class="timeline-item reveal">
-        <p class="timeline-date">Déc. 2024<br/>Avr. 2026</p>
-        <div class="timeline-line" aria-hidden="true"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Lead développeur, Architecte Logiciel &amp; DevOps</h3>
-          <p class="timeline-company">TINITZ · Abidjan, Côte d'Ivoire</p>
-          <ul class="timeline-tasks">
-            <li>Pipelines CI/CD (GitHub Actions) et environnements Docker Compose : réduction de 50&nbsp;% des délais de livraison.</li>
-            <li>ERP interne pour le département informatique, architecture multi-modules (stocks, facturation, CRM, RH) avec Laravel, React et MySQL.</li>
-            <li>Direction technique d'une équipe de 5 développeurs : attribution des tâches, standards de code et revues de code.</li>
-            <li>TTQ : application mobile Flutter sur bornes Android pour la gestion d'événements, l'accueil des participants, le vote électronique et les paiements intégrés.</li>
-            <li>TDisplay : application mobile Flutter de diffusion événementielle en boucle, contenu géré via API REST.</li>
-            <li>Développement et déploiement sur Linux de sites web institutionnels (aricsolutions.com, tinitz.ci).</li>
-            <li>Migration de l'équipe de Slack vers Mindtheos, la solution SaaS de pilotage d'entreprise développée en interne par TINITZ.</li>
-          </ul>
-          <ul class="timeline-stack">
-            <li class="skill-tag">Flutter</li><li class="skill-tag">Laravel</li>
-            <li class="skill-tag">React</li><li class="skill-tag">MySQL</li>
-            <li class="skill-tag">Docker Compose</li><li class="skill-tag">GitHub Actions</li>
-            <li class="skill-tag">Linux</li>
-          </ul>
-        </div>
+      <li class="job reveal">
+        <p class="job-date">Déc. 2024 · Avr. 2026</p>
+        <h3 class="job-role">Lead développeur, Architecte Logiciel &amp; DevOps</h3>
+        <p class="job-org">TINITZ · Abidjan, Côte d'Ivoire</p>
+        <ul class="lines">
+          <li>Pipelines CI/CD (GitHub Actions) et environnements Docker Compose : réduction de 50&nbsp;% des délais de livraison.</li>
+          <li>ERP interne pour le département informatique, architecture multi-modules (stocks, facturation, CRM, RH) avec Laravel, React et MySQL.</li>
+          <li>Direction technique d'une équipe de 5 développeurs : attribution des tâches, standards de code et revues de code.</li>
+          <li>TTQ : application mobile Flutter sur bornes Android pour la gestion d'événements, l'accueil des participants, le vote électronique et les paiements intégrés.</li>
+          <li>TDisplay : application mobile Flutter de diffusion événementielle en boucle, contenu géré via API REST.</li>
+          <li>Développement et déploiement sur Linux de sites web institutionnels (aricsolutions.com, tinitz.ci).</li>
+          <li>Migration de l'équipe de Slack vers Mindtheos, la solution SaaS de pilotage d'entreprise développée en interne par TINITZ.</li>
+        </ul>
+        <ul class="tags">
+          <li>Flutter</li><li>Laravel</li><li>React</li><li>MySQL</li><li>Docker Compose</li><li>GitHub Actions</li><li>Linux</li>
+        </ul>
       </li>
-      <li class="timeline-item reveal">
-        <p class="timeline-date">2022<br/>2024</p>
-        <div class="timeline-line" aria-hidden="true"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Analyste Programmeur (Freelance)</h3>
-          <p class="timeline-company">TERRAIN.NET · France, télétravail</p>
-          <ul class="timeline-tasks">
-            <li>Conception et développement de Sondny, plateforme de sondage en ligne utilisée lors de campagnes électorales : questionnaires dynamiques, collecte et analyse des réponses en temps réel, tableaux de bord et exports de rapports.</li>
-            <li>Architecture distribuée avec load balancing et cache Redis : plus de 50&nbsp;000 utilisateurs simultanés sans interruption.</li>
-            <li>Optimisation SQL (EXPLAIN, index composites, cache Redis) : réduction de 60&nbsp;% du temps d'exécution.</li>
-            <li>CRM sur mesure Laravel/React/MySQL avec filtres dynamiques et visualisations : +25&nbsp;% d'efficacité commerciale.</li>
-          </ul>
-          <ul class="timeline-stack">
-            <li class="skill-tag">Laravel</li><li class="skill-tag">React</li>
-            <li class="skill-tag">MySQL</li><li class="skill-tag">Redis</li>
-            <li class="skill-tag">Flutter</li><li class="skill-tag">SQLite</li>
-            <li class="skill-tag">PHP</li><li class="skill-tag">JavaScript</li>
-          </ul>
-        </div>
+      <li class="job reveal">
+        <p class="job-date">2022 · 2024</p>
+        <h3 class="job-role">Analyste Programmeur (Freelance)</h3>
+        <p class="job-org">TERRAIN.NET · France, télétravail</p>
+        <ul class="lines">
+          <li>Conception et développement de Sondny, plateforme de sondage en ligne utilisée lors de campagnes électorales : questionnaires dynamiques, collecte et analyse des réponses en temps réel, tableaux de bord et exports de rapports.</li>
+          <li>Architecture distribuée avec load balancing et cache Redis : plus de 50&nbsp;000 utilisateurs simultanés sans interruption.</li>
+          <li>Optimisation SQL (EXPLAIN, index composites, cache Redis) : réduction de 60&nbsp;% du temps d'exécution.</li>
+          <li>CRM sur mesure Laravel/React/MySQL avec filtres dynamiques et visualisations : +25&nbsp;% d'efficacité commerciale.</li>
+        </ul>
+        <ul class="tags">
+          <li>Laravel</li><li>React</li><li>MySQL</li><li>Redis</li><li>Flutter</li><li>SQLite</li><li>PHP</li><li>JavaScript</li>
+        </ul>
       </li>
-      <li class="timeline-item reveal">
-        <p class="timeline-date">Fév. 2022<br/>Oct. 2022</p>
-        <div class="timeline-line" aria-hidden="true"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Stagiaire Développeur C# &amp; SIG</h3>
-          <p class="timeline-company">CNTIG (Comité National de Télédétection et d'Information Géographique) · Abidjan, Côte d'Ivoire</p>
-          <ul class="timeline-tasks">
-            <li>Développement et maintenance de l'application DGIR et de la plateforme SISS (siss.geoportailsst.com), systèmes d'information géospatiale à usage gouvernemental.</li>
-            <li>Intégration de couches cartographiques avec SuperMap GIS pour la visualisation et l'analyse de données spatiales 2D/3D.</li>
-            <li>Perfectionnement en C# appliqué aux systèmes d'information géographique (SIG) et aux applications de cartographie web.</li>
-          </ul>
-          <ul class="timeline-stack">
-            <li class="skill-tag">C#</li><li class="skill-tag">SuperMap GIS</li>
-            <li class="skill-tag">SuperGeo</li><li class="skill-tag">SQL Server</li>
-            <li class="skill-tag">Web GIS</li>
-          </ul>
-        </div>
+      <li class="job reveal">
+        <p class="job-date">Fév. 2022 · Oct. 2022</p>
+        <h3 class="job-role">Stagiaire Développeur C# &amp; SIG</h3>
+        <p class="job-org">CNTIG (Comité National de Télédétection et d'Information Géographique) · Abidjan, Côte d'Ivoire</p>
+        <ul class="lines">
+          <li>Développement et maintenance de l'application DGIR et de la plateforme SISS (siss.geoportailsst.com), systèmes d'information géospatiale à usage gouvernemental.</li>
+          <li>Intégration de couches cartographiques avec SuperMap GIS pour la visualisation et l'analyse de données spatiales 2D/3D.</li>
+          <li>Perfectionnement en C# appliqué aux systèmes d'information géographique (SIG) et aux applications de cartographie web.</li>
+        </ul>
+        <ul class="tags">
+          <li>C#</li><li>SuperMap GIS</li><li>SuperGeo</li><li>SQL Server</li><li>Web GIS</li>
+        </ul>
       </li>
-      <li class="timeline-item reveal">
-        <p class="timeline-date">Oct. 2020<br/>Avr. 2021</p>
-        <div class="timeline-line" aria-hidden="true"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Analyste Programmeur</h3>
-          <p class="timeline-company">MYBEATUS · Cotonou, Bénin</p>
-          <ul class="timeline-tasks">
-            <li>Plateforme éducative : analyse du code existant, correction de bogues et développement de nouvelles fonctionnalités.</li>
-            <li>Formation des utilisateurs : préparation des supports et animation des sessions de formation pour les enseignants et les parents.</li>
-          </ul>
-          <ul class="timeline-stack">
-            <li class="skill-tag">Laravel</li><li class="skill-tag">Angular</li>
-            <li class="skill-tag">MySQL</li>
-          </ul>
-        </div>
+      <li class="job reveal">
+        <p class="job-date">Oct. 2020 · Avr. 2021</p>
+        <h3 class="job-role">Analyste Programmeur</h3>
+        <p class="job-org">MYBEATUS · Cotonou, Bénin</p>
+        <ul class="lines">
+          <li>Plateforme éducative : analyse du code existant, correction de bogues et développement de nouvelles fonctionnalités.</li>
+          <li>Formation des utilisateurs : préparation des supports et animation des sessions de formation pour les enseignants et les parents.</li>
+        </ul>
+        <ul class="tags">
+          <li>Laravel</li><li>Angular</li><li>MySQL</li>
+        </ul>
       </li>
-      <li class="timeline-item reveal">
-        <p class="timeline-date">Avr. 2020<br/>Oct. 2020</p>
-        <div class="timeline-line" aria-hidden="true"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Analyste Programmeur</h3>
-          <p class="timeline-company">La Poste du Bénin · Cotonou, Bénin</p>
-          <ul class="timeline-tasks">
-            <li>Analyse des besoins métier et modélisation Merise (MCD/MLD) d'une application de gestion de courrier et de stock.</li>
-            <li>Développement de l'application en C# et SQL Server.</li>
-            <li>Gestion des courriers entrants et sortants, suivi des stocks.</li>
-            <li>Tests, recette et formation des utilisateurs.</li>
-          </ul>
-          <ul class="timeline-stack">
-            <li class="skill-tag">C#</li><li class="skill-tag">SQL Server</li>
-            <li class="skill-tag">Merise</li>
-          </ul>
-        </div>
+      <li class="job reveal">
+        <p class="job-date">Avr. 2020 · Oct. 2020</p>
+        <h3 class="job-role">Analyste Programmeur</h3>
+        <p class="job-org">La Poste du Bénin · Cotonou, Bénin</p>
+        <ul class="lines">
+          <li>Analyse des besoins métier et modélisation Merise (MCD/MLD) d'une application de gestion de courrier et de stock.</li>
+          <li>Développement de l'application en C# et SQL Server.</li>
+          <li>Gestion des courriers entrants et sortants, suivi des stocks.</li>
+          <li>Tests, recette et formation des utilisateurs.</li>
+        </ul>
+        <ul class="tags">
+          <li>C#</li><li>SQL Server</li><li>Merise</li>
+        </ul>
       </li>
     </ol>
 
-    <div class="secondary-exp reveal">
-      <h3 class="secondary-exp-title">Expérience au Québec</h3>
+    <div class="quebec reveal">
+      <h3 class="label">Expérience au Québec</h3>
       <ul>
-        <li><strong>Agent d'entretien</strong>, GDI <span>Depuis septembre 2026</span></li>
-        <li><strong>Préposé à l'entretien des chambres</strong>, 9Onze <span>Juillet à septembre 2026</span></li>
+        <li><span class="quebec-role">Agent d'entretien</span> · GDI <span class="quebec-date">Depuis septembre 2026</span></li>
+        <li><span class="quebec-role">Préposé à l'entretien des chambres</span> · 9Onze <span class="quebec-date">Juillet à septembre 2026</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- FORMATION -->
-<section id="education" class="section-bg" aria-labelledby="education-title">
-  <div class="section-wrap">
-    <p class="section-label">// Formation</p>
-    <h2 class="section-title" id="education-title">Formation</h2>
-    <div class="edu-grid">
-      <article class="edu-card reveal">
-        <p class="edu-date">2026 – en cours</p>
-        <h3 class="edu-degree">DESS en intelligence artificielle</h3>
-        <p class="edu-school">Université Laval</p>
-        <p class="edu-note">Membre du Club d'intelligence artificielle de l'Université Laval.</p>
-      </article>
-      <article class="edu-card reveal">
-        <p class="edu-date">2026</p>
-        <h3 class="edu-degree">Attestation : Valeurs démocratiques et québécoises</h3>
-        <p class="edu-school">Programme Objectif Intégration, Collectif des femmes immigrantes du Québec, Montréal</p>
-      </article>
-      <article class="edu-card reveal">
-        <p class="edu-date">2017 – 2020</p>
-        <h3 class="edu-degree">Baccalauréat en génie logiciel</h3>
-        <p class="edu-school">Université d'Abomey-Calavi, Bénin</p>
-      </article>
-    </div>
+<!-- 05 · FORMATION -->
+<section class="section" id="formation" aria-labelledby="formation-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-num">05 · Formation</p>
+      <h2 class="section-title" id="formation-title">Formation</h2>
+    </header>
+    <ul class="edu">
+      <li class="edu-item reveal">
+        <p class="job-date">2026 · en cours</p>
+        <h3 class="edu-title">DESS en intelligence artificielle</h3>
+        <p class="edu-org">Université Laval</p>
+      </li>
+      <li class="edu-item reveal">
+        <p class="job-date">2026 · membre</p>
+        <h3 class="edu-title">Club d'intelligence artificielle</h3>
+        <p class="edu-org">Université Laval</p>
+      </li>
+      <li class="edu-item reveal">
+        <p class="job-date">2026</p>
+        <h3 class="edu-title">Attestation : Valeurs démocratiques et québécoises</h3>
+        <p class="edu-org">Programme Objectif Intégration, Collectif des femmes immigrantes du Québec, Montréal</p>
+      </li>
+      <li class="edu-item reveal">
+        <p class="job-date">2017 · 2020</p>
+        <h3 class="edu-title">Baccalauréat en génie logiciel</h3>
+        <p class="edu-org">Université d'Abomey-Calavi, Bénin</p>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- PARCOURS IA -->
-<section id="ai-path" aria-labelledby="ai-title">
-  <div class="section-wrap">
-    <p class="section-label">// Parcours IA</p>
-    <h2 class="section-title" id="ai-title">Direction : <span>MLOps</span></h2>
-    <p class="ai-intro reveal">
-      Je m'appuie sur mon expérience DevOps (Docker, CI/CD, Azure) pour apprendre à mettre des modèles en production.
+<!-- 06 · PARCOURS IA -->
+<section class="section" id="parcours-ia" aria-labelledby="ia-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-num">06 · Parcours IA</p>
+      <h2 class="section-title" id="ia-title">Direction : MLOps</h2>
+    </header>
+    <p class="prose reveal">
+      Mon objectif de carrière : devenir développeur en apprentissage automatique (MLOps).
+      Je m'appuie sur mon expérience DevOps (Docker, CI/CD, Azure) pour apprendre à mettre des modèles d'IA en production.
     </p>
-    <ol class="ai-steps reveal">
-      <li class="ai-step">
-        <span class="ai-step-label">Acquis</span>
-        <strong>DevOps</strong>
-        <span>Docker, CI/CD, Azure</span>
+    <ol class="steps reveal">
+      <li class="step is-done">
+        <p class="step-state">Maîtrisé</p>
+        <h3 class="step-title">DevOps</h3>
+        <p class="step-text">Docker, CI/CD, Azure</p>
       </li>
-      <li class="ai-step ai-step-current">
-        <span class="ai-step-label">En cours</span>
-        <strong>Apprentissage automatique</strong>
-        <span>Python, scikit-learn, PyTorch</span>
+      <li class="step is-current">
+        <p class="step-state">En cours</p>
+        <h3 class="step-title">Apprentissage automatique</h3>
+        <p class="step-text">Python, scikit-learn, PyTorch</p>
       </li>
-      <li class="ai-step">
-        <span class="ai-step-label">Objectif</span>
-        <strong>MLOps</strong>
-        <span>Mettre des modèles d'IA en production</span>
+      <li class="step">
+        <p class="step-state">Objectif</p>
+        <h3 class="step-title">MLOps</h3>
+        <p class="step-text">Mettre des modèles d'IA en production</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact-section" aria-labelledby="contact-title">
-  <div class="contact-inner reveal">
-    <p class="section-label contact-label">// Contact</p>
-    <h2 class="contact-title" id="contact-title">Travaillons <span>ensemble</span></h2>
-    <p class="contact-desc">Québec, Canada. Résident permanent du Canada.<br/>Téléphone : <a href="tel:+15148093207">514&nbsp;809&nbsp;3207</a></p>
-    <div class="contact-links">
-      <a href="mailto:moseswisegit@gmail.com" class="btn btn-contact-primary"><span aria-hidden="true">✉</span> moseswisegit@gmail.com</a>
-      <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" rel="noopener" class="btn btn-contact-outline">LinkedIn</a>
-      <a href="https://github.com/moseswisegit" target="_blank" rel="noopener" class="btn btn-contact-outline">GitHub</a>
-      <a href="cv/CV_Agbossaga_Moise_Final.pdf" download class="btn btn-contact-outline"><span aria-hidden="true">📄</span> Télécharger mon CV</a>
+<!-- 07 · CONTACT -->
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-num">07 · Contact</p>
+      <h2 class="section-title" id="contact-title">Contact</h2>
+    </header>
+    <div class="contact-grid reveal">
+      <p class="prose">Québec, Canada. Résident permanent du Canada. Le plus simple pour me joindre est le courriel.</p>
+      <ul class="contact-list">
+        <li><span class="label">Courriel</span><a class="link" href="mailto:moseswisegit@gmail.com">moseswisegit@gmail.com</a></li>
+        <li><span class="label">LinkedIn</span><a class="link" href="https://linkedin.com/in/moise-agbossaga" target="_blank" rel="noopener">linkedin.com/in/moise-agbossaga</a></li>
+        <li><span class="label">GitHub</span><a class="link" href="https://github.com/moseswisegit" target="_blank" rel="noopener">github.com/moseswisegit</a></li>
+      </ul>
+      <div>
+        <a href="cv/CV_Agbossaga_Moise_Final.pdf" class="btn btn-primary" download>Télécharger mon CV</a>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer>
-  <span class="footer-name">Moïse Innocent Agbossaga</span> · Québec, Canada · 2026
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Moïse Innocent Agbossaga · 2026</p>
+    <a class="link" href="#top">Retour en haut</a>
+  </div>
 </footer>
 
 <script src="assets/js/main.js" defer></script>
