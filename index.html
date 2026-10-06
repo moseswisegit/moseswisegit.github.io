@@ -1,466 +1,397 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CA">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Moïse Agbossaga — Architecte Logiciel & Développeur Full Stack</title>
-<meta name="description" content="Architecte logiciel et développeur Full Stack &amp; Mobile basé à Québec. Laravel, Flutter, React, C#/.NET, Docker, SIG. Portfolio, projets et parcours professionnel."/>
+<title>Moïse Innocent Agbossaga | Développeur logiciel Full Stack, Cloud et IA</title>
+<meta name="description" content="Développeur logiciel full stack, mobile et DevOps à Québec, étudiant au DESS en intelligence artificielle à l'Université Laval. Applications déployées sur Azure avec Docker, CI/CD et tests automatisés."/>
+<meta name="author" content="Moïse Innocent Agbossaga"/>
+<meta name="theme-color" content="#0B1120"/>
 <link rel="canonical" href="https://moseswisegit.github.io/"/>
 
-<meta property="og:type" content="website"/>
+<meta property="og:type" content="profile"/>
 <meta property="og:url" content="https://moseswisegit.github.io/"/>
-<meta property="og:title" content="Moïse Agbossaga — Architecte Logiciel & Développeur Full Stack"/>
-<meta property="og:description" content="Architecte logiciel et développeur Full Stack &amp; Mobile basé à Québec. Laravel, Flutter, React, C#/.NET, Docker, SIG."/>
+<meta property="og:site_name" content="Moïse Innocent Agbossaga"/>
+<meta property="og:title" content="Moïse Innocent Agbossaga | Développeur logiciel Full Stack, Cloud et IA"/>
+<meta property="og:description" content="Développeur logiciel full stack, mobile et DevOps à Québec. Applications déployées sur Azure avec Docker, CI/CD et tests automatisés. Objectif : MLOps."/>
+<meta property="og:image" content="https://moseswisegit.github.io/assets/img/moise.jpg"/>
+<meta property="og:image:width" content="466"/>
+<meta property="og:image:height" content="700"/>
+<meta property="og:image:alt" content="Photo de Moïse Innocent Agbossaga"/>
 <meta property="og:locale" content="fr_CA"/>
+<meta property="profile:first_name" content="Moïse Innocent"/>
+<meta property="profile:last_name" content="Agbossaga"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Moïse Agbossaga — Architecte Logiciel & Développeur Full Stack"/>
-<meta name="twitter:description" content="Architecte logiciel et développeur Full Stack &amp; Mobile basé à Québec. Laravel, Flutter, React, C#/.NET, Docker, SIG."/>
+<meta name="twitter:title" content="Moïse Innocent Agbossaga | Développeur logiciel Full Stack, Cloud et IA"/>
+<meta name="twitter:description" content="Développeur logiciel full stack, mobile et DevOps à Québec. Applications déployées sur Azure avec Docker, CI/CD et tests automatisés."/>
+<meta name="twitter:image" content="https://moseswisegit.github.io/assets/img/moise.jpg"/>
 
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="assets/css/style.css"/>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">MA<span style="color:var(--amber)">.</span></div>
-  <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#skills">Compétences</a></li>
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#experience">Expérience</a></li>
-    <li><a href="#contact-section">Contact</a></li>
-  </ul>
-</nav>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header>
+  <nav aria-label="Navigation principale">
+    <a href="#hero" class="nav-logo" aria-label="MA. Retour en haut de page">MA<span aria-hidden="true">.</span></a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#ulconnect">ULconnect</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#experience">Expérience</a></li>
+      <li><a href="#education">Formation</a></li>
+      <li><a href="#ai-path">Parcours IA</a></li>
+      <li><a href="#contact-section">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" aria-labelledby="hero-name">
   <div class="hero-inner">
-  <div class="hero-content">
-  <div class="hero-eyebrow">Disponible à Québec &amp; télétravail</div>
-  <h1 class="hero-name">Moïse<br/><span>Agbossaga</span></h1>
-  <div class="hero-title" id="typed-title"><span class="cursor"></span></div>
-  <p class="hero-desc">
-    Architecte logiciel et développeur Full Stack &amp; Mobile basé à Québec. Je conçois des systèmes robustes, 
-    des applications mobiles cross-platform et des pipelines DevOps — du code propre, des résultats mesurables.
-    Admis au DESS en Intelligence Artificielle à l'Université Laval (sept. 2026).
-  </p>
-  <div class="hero-cta">
-    <a href="mailto:moseswisegit@gmail.com" class="btn btn-primary">✉ Me contacter</a>
-    <a href="assets/cv/CV_Moise_Agbossaga.pdf" download class="btn btn-outline">📄 Télécharger mon CV</a>
-    <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" class="btn btn-outline">LinkedIn</a>
-    <a href="https://github.com/moseswisegit" target="_blank" class="btn btn-outline">GitHub</a>
-  </div>
-  <div class="hero-badges">
-    <span class="hero-badge">Laravel</span>
-    <span class="hero-badge">Flutter</span>
-    <span class="hero-badge">React</span>
-    <span class="hero-badge">C# / .NET</span>
-    <span class="hero-badge">Docker</span>
-    <span class="hero-badge">SuperMap GIS</span>
-    <span class="hero-badge">IA & Robotique</span>
-  </div>
-  </div>
-  <div class="hero-photo">
-    <img src="assets/img/moise.jpg" alt="Photo de Moïse Agbossaga" width="466" height="700"/>
-  </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Québec, Canada · Résident permanent</p>
+      <h1 class="hero-name" id="hero-name">Moïse Innocent<br/><span>Agbossaga</span></h1>
+      <p class="hero-title">Développeur logiciel | Full Stack, Cloud et IA<span class="cursor" aria-hidden="true"></span></p>
+      <p class="hero-desc">
+        Développeur logiciel spécialisé en full stack, mobile et DevOps, étudiant au DESS en intelligence artificielle
+        à l'Université Laval. Je conçois et déploie des applications sur Azure avec Docker, CI/CD et tests automatisés.
+        Mon objectif de carrière : devenir développeur en apprentissage automatique (MLOps) et mettre des modèles d'IA en production.
+      </p>
+      <div class="hero-cta">
+        <a href="cv/CV_Agbossaga_Moise_Final.pdf" download class="btn btn-primary"><span aria-hidden="true">📄</span> Télécharger mon CV</a>
+        <a href="#contact-section" class="btn btn-outline">Me contacter</a>
+        <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+        <a href="https://github.com/moseswisegit" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      </div>
+      <ul class="hero-badges">
+        <li class="hero-badge">Azure</li>
+        <li class="hero-badge">Docker</li>
+        <li class="hero-badge">GitHub Actions</li>
+        <li class="hero-badge">ASP.NET Core 8</li>
+        <li class="hero-badge">React Native</li>
+        <li class="hero-badge">PostgreSQL</li>
+      </ul>
+    </div>
+    <div class="hero-photo">
+      <picture>
+        <source srcset="assets/img/moise-340.webp 340w, assets/img/moise.webp 466w" sizes="(max-width: 900px) 170px, 250px" type="image/webp"/>
+        <img src="assets/img/moise.jpg" alt="Portrait de Moïse Innocent Agbossaga" width="466" height="700" fetchpriority="high" decoding="async"/>
+      </picture>
+    </div>
   </div>
 </section>
 
-<!-- STATS -->
-<div id="stats">
-  <div class="stats-grid">
-    <div class="reveal"><div class="stat-number">50k+</div><div class="stat-label">utilisateurs simultanés</div></div>
-    <div class="reveal"><div class="stat-number">−50%</div><div class="stat-label">délais de déploiement</div></div>
-    <div class="reveal"><div class="stat-number">−60%</div><div class="stat-label">temps d'exécution SQL</div></div>
-    <div class="reveal"><div class="stat-number">+25%</div><div class="stat-label">efficacité commerciale</div></div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<div id="about" class="section-bg">
+<!-- ULCONNECT -->
+<section id="ulconnect" class="section-bg" aria-labelledby="ulconnect-title">
   <div class="section-wrap">
-    <div class="section-label">// À PROPOS</div>
-    <h2 class="section-title">Qui <span>suis-je</span> ?</h2>
-    <div class="about-grid reveal">
-      <div>
-        <p style="color:var(--gray);line-height:1.8;margin-bottom:1.25rem;">
-          Développeur passionné basé à Québec, je combine une expertise en architecture logicielle, 
-          développement mobile cross-platform (Flutter, React Native), DevOps et systèmes d'information 
-          géographique (SuperMap GIS). J'ai livré des projets à fort impact pour des clients en Afrique et en Europe, 
-          en télétravail et en présentiel.
+    <p class="section-label">// Projet principal</p>
+    <h2 class="section-title" id="ulconnect-title">UL<span>connect</span></h2>
+
+    <article class="feature-card reveal">
+      <div class="feature-head">
+        <p class="feature-desc">
+          Plateforme pour les étudiants de l'Université Laval. L'application mobile est en validation sur Google Play.
+          L'API et la console d'administration sont déployées sur Azure.
         </p>
-        <p style="color:var(--gray);line-height:1.8;margin-bottom:1.25rem;">
-          Autonome, rigoureux et orienté résultats, j'ai coordonné des équipes techniques en tant que Lead Développeur 
-          chez TINITZ, où j'ai mis en place des standards de qualité, des pipelines CI/CD et migré l'équipe 
-          vers Mindtheos, la solution SaaS interne de gestion d'entreprise.
-        </p>
-        <p style="color:var(--gray);line-height:1.8;">
-          Admis au <strong style="color:var(--navy)">DESS en Intelligence Artificielle</strong> à l'Université Laval 
-          (début sept. 2026), je construis une vision centrée sur la convergence entre l'IA, la cybersécurité et la robotique.
-        </p>
+        <span class="project-badge wip">En validation sur Google Play</span>
       </div>
-      <div style="display:flex;flex-direction:column;gap:0.75rem;">
-        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
-          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">FORMATION</div>
-          <div style="font-size:0.875rem;color:var(--gray);">DESS Intelligence Artificielle — Université Laval (sept. 2026)<br/>Bac. Génie Logiciel — Université d'Abomey-Calavi (2017–2020)</div>
+
+      <dl class="feature-stats">
+        <div><dt>Écrans mobiles</dt><dd>63</dd></div>
+        <div><dt>Routes API</dt><dd>244</dd></div>
+        <div><dt>Tables PostgreSQL</dt><dd>55</dd></div>
+        <div><dt>Tests automatisés</dt><dd>~450</dd></div>
+      </dl>
+
+      <div class="feature-grid">
+        <div class="feature-block">
+          <h3>Application mobile</h3>
+          <p>React Native (Expo) et TypeScript, 63 écrans.</p>
         </div>
-        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
-          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">LOCALISATION</div>
-          <div style="font-size:0.875rem;color:var(--gray);">Québec, Canada G1V 0A7<br/>Disponible immédiatement · Présentiel ou télétravail</div>
+        <div class="feature-block">
+          <h3>API</h3>
+          <p>ASP.NET Core 8 : 244 routes, 48 contrôleurs, SignalR pour le temps réel, PostgreSQL (55 tables, 34 migrations).</p>
         </div>
-        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
-          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">LANGUES</div>
-          <div style="font-size:0.875rem;color:var(--gray);">Français (maternel) · Anglais fonctionnel</div>
+        <div class="feature-block">
+          <h3>Infrastructure Azure</h3>
+          <p>API conteneurisée avec Docker sur Azure App Service, console React 19 / Vite sur Azure Static Web Apps, Blob Storage, Cloudflare (SSL), envoi de courriels avec Brevo (DKIM/DMARC).</p>
         </div>
-        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:0.5rem;padding:1rem 1.25rem;">
-          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;letter-spacing:0.1em;">CONTACT</div>
-          <div style="font-size:0.875rem;color:var(--gray);">moseswisegit@gmail.com<br/>+1 514 809 3207</div>
+        <div class="feature-block">
+          <h3>CI/CD et tests</h3>
+          <p>GitHub Actions (build, tests, déploiement). Environ 450 tests automatisés : 431 côté API, 31 côté mobile.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Sécurité et conformité</h3>
+          <p>JWT, double authentification, limitation de débit, conformité à la Loi 25.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Administration</h3>
+          <p>Console avec 6 rôles, abonnement géré par feature flag. Tests de charge à 2&nbsp;000 inscriptions par minute, réalisés en local.</p>
         </div>
       </div>
+
+      <figure class="arch" aria-labelledby="arch-caption">
+        <figcaption id="arch-caption" class="arch-caption">Architecture</figcaption>
+        <div class="arch-flow">
+          <div class="arch-row arch-row-2">
+            <div class="arch-node"><strong>Application mobile</strong><span>React Native (Expo)</span></div>
+            <div class="arch-node"><strong>Console d'administration</strong><span>React 19 / Vite · Static Web Apps</span></div>
+          </div>
+          <div class="arch-arrow" aria-hidden="true"><span>HTTPS · SignalR</span></div>
+          <div class="arch-row">
+            <div class="arch-node arch-edge"><strong>Cloudflare</strong><span>SSL</span></div>
+          </div>
+          <div class="arch-arrow" aria-hidden="true"></div>
+          <div class="arch-row arch-row-api">
+            <div class="arch-node arch-core"><strong>API ASP.NET Core 8</strong><span>Docker · Azure App Service</span></div>
+            <div class="arch-node arch-ci"><strong>GitHub Actions</strong><span>Build, tests, déploiement</span></div>
+          </div>
+          <div class="arch-arrow" aria-hidden="true"></div>
+          <div class="arch-row arch-row-3">
+            <div class="arch-node"><strong>PostgreSQL</strong><span>55 tables</span></div>
+            <div class="arch-node"><strong>Blob Storage</strong><span>Fichiers</span></div>
+            <div class="arch-node"><strong>Brevo</strong><span>Courriels</span></div>
+          </div>
+        </div>
+      </figure>
+
+      <ul class="project-stack">
+        <li class="project-tag">React Native</li><li class="project-tag">TypeScript</li>
+        <li class="project-tag">ASP.NET Core 8</li><li class="project-tag">SignalR</li>
+        <li class="project-tag">PostgreSQL</li><li class="project-tag">Docker</li>
+        <li class="project-tag">Azure</li><li class="project-tag">GitHub Actions</li>
+      </ul>
+
+      <div class="feature-actions">
+        <a href="https://github.com/moseswisegit/ulconnect-showcase" target="_blank" rel="noopener" class="btn btn-outline">Voir ULconnect sur GitHub</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- AUTRES PROJETS -->
+<section id="projects" aria-labelledby="projects-title">
+  <div class="section-wrap">
+    <p class="section-label">// Projets</p>
+    <h2 class="section-title" id="projects-title">Autres <span>projets</span></h2>
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <div class="project-header">
+          <h3 class="project-name">CouturioShop</h3>
+          <span class="project-badge wip">En développement</span>
+        </div>
+        <p class="project-desc">Marketplace de mode africaine. Co-fondateur et architecte technique.</p>
+        <ul class="project-details">
+          <li>Laravel et Flutter</li>
+          <li>Paiements mobiles : Wave, Orange Money, MTN</li>
+          <li>Module IA de scan corporel en cours de conception (Python, en formation)</li>
+        </ul>
+        <ul class="project-stack">
+          <li class="project-tag">Laravel</li><li class="project-tag">Flutter</li>
+          <li class="project-tag">Python</li>
+        </ul>
+      </article>
     </div>
   </div>
-</div>
+</section>
 
-<!-- SKILLS -->
-<div id="skills">
+<!-- COMPÉTENCES -->
+<section id="skills" class="section-bg" aria-labelledby="skills-title">
   <div class="section-wrap">
-    <div class="section-label">// COMPÉTENCES</div>
-    <h2 class="section-title">Stack <span>technique</span></h2>
+    <p class="section-label">// Compétences</p>
+    <h2 class="section-title" id="skills-title">Stack <span>technique</span></h2>
     <div class="skills-grid">
       <div class="skill-card reveal">
-        <div class="skill-card-title">LANGAGES</div>
-        <div class="skill-tags">
-          <span class="skill-tag">PHP</span><span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">TypeScript</span><span class="skill-tag">C#</span>
-          <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Dart</span>
-        </div>
+        <h3 class="skill-card-title">Cloud et DevOps</h3>
+        <ul class="skill-tags">
+          <li class="skill-tag">Azure App Service</li><li class="skill-tag">Azure Static Web Apps</li>
+          <li class="skill-tag">Azure Blob Storage</li><li class="skill-tag">Azure PostgreSQL</li>
+          <li class="skill-tag">Docker</li><li class="skill-tag">Docker Compose</li>
+          <li class="skill-tag">CI/CD GitHub Actions</li><li class="skill-tag">Linux</li><li class="skill-tag">Git</li>
+        </ul>
       </div>
       <div class="skill-card reveal">
-        <div class="skill-card-title">FRAMEWORKS & MOBILE</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Laravel</span><span class="skill-tag">ASP.NET Core</span>
-          <span class="skill-tag">React</span><span class="skill-tag">React Native</span>
-          <span class="skill-tag">Flutter</span><span class="skill-tag">GetX</span>
-        </div>
+        <h3 class="skill-card-title">Infrastructure et sécurité</h3>
+        <ul class="skill-tags">
+          <li class="skill-tag">Cloudflare</li><li class="skill-tag">SSL/HTTPS</li>
+          <li class="skill-tag">JWT</li><li class="skill-tag">Double authentification</li>
+          <li class="skill-tag">Limitation de débit</li>
+        </ul>
       </div>
       <div class="skill-card reveal">
-        <div class="skill-card-title">BASES DE DONNÉES</div>
-        <div class="skill-tags">
-          <span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">SQL Server</span><span class="skill-tag">Redis</span>
-          <span class="skill-tag">SQLite</span>
-        </div>
+        <h3 class="skill-card-title">Backend et API</h3>
+        <ul class="skill-tags">
+          <li class="skill-tag">ASP.NET Core 8</li><li class="skill-tag">C#</li>
+          <li class="skill-tag">SignalR</li><li class="skill-tag">Entity Framework</li>
+          <li class="skill-tag">Laravel</li><li class="skill-tag">REST</li>
+        </ul>
       </div>
       <div class="skill-card reveal">
-        <div class="skill-card-title">DEVOPS & INFRA</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Docker</span><span class="skill-tag">CI/CD</span>
-          <span class="skill-tag">GitHub Actions</span><span class="skill-tag">Linux</span>
-          <span class="skill-tag">Git</span>
-        </div>
+        <h3 class="skill-card-title">Frontend et mobile</h3>
+        <ul class="skill-tags">
+          <li class="skill-tag">React</li><li class="skill-tag">React Native (Expo)</li>
+          <li class="skill-tag">TypeScript</li><li class="skill-tag">Flutter</li>
+          <li class="skill-tag">Angular</li><li class="skill-tag">HTML/CSS</li>
+        </ul>
       </div>
       <div class="skill-card reveal">
-        <div class="skill-card-title">SIG & CARTOGRAPHIE</div>
-        <div class="skill-tags">
-          <span class="skill-tag">SuperMap GIS</span><span class="skill-tag">SuperGeo</span>
-          <span class="skill-tag">Web GIS</span><span class="skill-tag">Données géospatiales</span>
-        </div>
+        <h3 class="skill-card-title">IA</h3>
+        <ul class="skill-tags">
+          <li class="skill-tag">Python</li>
+          <li class="skill-tag">scikit-learn (en apprentissage)</li>
+          <li class="skill-tag">PyTorch (en apprentissage)</li>
+          <li class="skill-tag">Notions de MLOps</li>
+        </ul>
       </div>
       <div class="skill-card reveal">
-        <div class="skill-card-title">MÉTHODOLOGIES</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Agile / Scrum</span><span class="skill-tag">REST API</span>
-          <span class="skill-tag">JWT</span><span class="skill-tag">Webhooks</span>
-          <span class="skill-tag">Merise</span><span class="skill-tag">UML</span>
-        </div>
+        <h3 class="skill-card-title">Bases de données et qualité</h3>
+        <ul class="skill-tags">
+          <li class="skill-tag">MySQL</li><li class="skill-tag">PostgreSQL</li>
+          <li class="skill-tag">SQL Server</li><li class="skill-tag">Tests automatisés</li>
+          <li class="skill-tag">Agile</li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- PROJECTS -->
-<div id="projects" class="section-bg">
+<!-- EXPÉRIENCE -->
+<section id="experience" aria-labelledby="experience-title">
   <div class="section-wrap">
-    <div class="section-label">// PROJETS</div>
-    <h2 class="section-title">Réalisations <span>marquantes</span></h2>
-    <div class="projects-grid">
-
-      <div class="project-card reveal">
-        <div class="project-header">
-          <div class="project-icon">💼</div>
-          <span class="project-badge wip">Exercice technique — Open source</span>
-        </div>
-        <div class="project-name"><a href="https://github.com/moseswisegit/job-tracker-fullstack" target="_blank" style="color:var(--navy);text-decoration:none;">Job Tracker ↗</a></div>
-        <div class="project-desc">Suivi de candidatures fullstack (API .NET + React/TypeScript) avec authentification JWT par utilisateur et tableau de bord conçu à partir d'une maquette Claude Design.</div>
-        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
-        <div class="project-details">
-          <ul>
-            <li>API .NET (minimal APIs) en couches : domaine riche (transitions de statut, règles de relance), infrastructure EF Core/SQLite, contrats REST</li>
-            <li>Authentification JWT, candidatures rattachées à chaque utilisateur</li>
-            <li>Tableau de bord React/TypeScript/Tailwind : entonnoir de statuts, liste filtrable et triable, bilan hebdomadaire, rappels de relance, export CSV/JSON</li>
-            <li>Tiroirs de détail et d'édition avec archivage du texte de l'annonce (le lien peut expirer, la copie reste)</li>
-            <li>Tests unitaires (xUnit + Vitest) et vérification manuelle de tous les modules avant mise en production</li>
+    <p class="section-label">// Expérience</p>
+    <h2 class="section-title" id="experience-title">Parcours <span>professionnel</span></h2>
+    <ol class="timeline">
+      <li class="timeline-item reveal">
+        <p class="timeline-date">2024 – 2026</p>
+        <div class="timeline-line" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Lead développeur, Architecte Logiciel &amp; DevOps</h3>
+          <p class="timeline-company">TINITZ · Abidjan</p>
+          <ul class="timeline-tasks">
+            <li>Pipelines CI/CD (GitHub Actions) et environnements Docker Compose : réduction de 50&nbsp;% des délais de livraison.</li>
+            <li>ERP interne pour le département informatique (stocks, facturation, CRM, RH) avec Laravel, React et MySQL.</li>
+            <li>Direction technique d'une équipe de 5 développeurs : standards de code et revues de code.</li>
+            <li>Applications mobiles Flutter et sites web.</li>
+          </ul>
+          <ul class="timeline-stack">
+            <li class="skill-tag">GitHub Actions</li><li class="skill-tag">Docker Compose</li>
+            <li class="skill-tag">Laravel</li><li class="skill-tag">React</li>
+            <li class="skill-tag">MySQL</li><li class="skill-tag">Flutter</li>
           </ul>
         </div>
-        <div class="project-stack">
-          <span class="project-tag">.NET</span><span class="project-tag">C#</span>
-          <span class="project-tag">EF Core</span><span class="project-tag">React</span>
-          <span class="project-tag">TypeScript</span><span class="project-tag">Tailwind</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-header">
-          <div class="project-icon">🎫</div>
-          <span class="project-badge wip">Exercice technique — Open source</span>
-        </div>
-        <div class="project-name"><a href="https://github.com/moseswisegit/ticket-manager-fullstack" target="_blank" style="color:var(--navy);text-decoration:none;">Gestionnaire de Tickets ↗</a></div>
-        <div class="project-desc">App fullstack de gestion de tickets (React/TypeScript + Express) avec mise à jour optimiste, rollback et types partagés de bout en bout.</div>
-        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
-        <div class="project-details">
-          <ul>
-            <li>Monorepo npm workspaces : backend Express en couches, frontend React/Vite, types partagés</li>
-            <li>Validation Zod côté serveur, typage strict de bout en bout</li>
-            <li>Mise à jour optimiste de la liste avec rollback propre en cas d'échec</li>
-            <li>Tous les états d'interface gérés explicitement (chargement, erreur, liste vide, création, échec)</li>
-            <li>README documentant les vérifications manuelles effectuées (typecheck, build, tests API, navigateur) et l'usage de l'IA dans le développement</li>
+      </li>
+      <li class="timeline-item reveal">
+        <p class="timeline-date">2022 – 2024</p>
+        <div class="timeline-line" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Analyste Programmeur (Freelance)</h3>
+          <p class="timeline-company">TERRAIN.NET · France, télétravail</p>
+          <ul class="timeline-tasks">
+            <li>CRM sur mesure Laravel/React/MySQL : +25&nbsp;% d'efficacité.</li>
+            <li>Plateforme électorale : load balancing, Redis.</li>
+            <li>Optimisation SQL (EXPLAIN, index, Redis) : gain de 60&nbsp;%.</li>
+          </ul>
+          <ul class="timeline-stack">
+            <li class="skill-tag">Laravel</li><li class="skill-tag">React</li>
+            <li class="skill-tag">MySQL</li><li class="skill-tag">Redis</li>
           </ul>
         </div>
-        <div class="project-stack">
-          <span class="project-tag">React</span><span class="project-tag">TypeScript</span>
-          <span class="project-tag">Express</span><span class="project-tag">Zod</span>
-          <span class="project-tag">Tailwind</span>
-        </div>
-      </div>
+      </li>
+    </ol>
 
-      <div class="project-card reveal">
-        <div class="project-header">
-          <div class="project-icon">👗</div>
-          <span class="project-badge wip">En cours</span>
-        </div>
-        <div class="project-name"><a href="https://couturioshop.com" target="_blank" style="color:var(--navy);text-decoration:none;">CouturioShop ↗</a></div>
-        <div class="project-desc">Marketplace de mode africaine avec paiements mobiles intégrés et module IA de scan corporel.</div>
-        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
-        <div class="project-details">
-          <ul>
-            <li>Marketplace multi-vendeurs Laravel + Flutter</li>
-            <li>Paiements mobiles intégrés : Wave, Orange Money, MTN Money</li>
-            <li>Module IA de scan corporel pour génération automatique des mesures client (Python)</li>
-            <li>Gestion des commandes, catalogue produits et messagerie vendeur/acheteur</li>
-            <li>Application mobile cross-platform iOS/Android</li>
-          </ul>
-        </div>
-        <div class="project-stack">
-          <span class="project-tag">Laravel</span><span class="project-tag">Flutter</span>
-          <span class="project-tag">Python</span><span class="project-tag">MySQL</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-header">
-          <div class="project-icon">📱</div>
-          <span class="project-badge">Production — TINITZ</span>
-        </div>
-        <div class="project-name">TTQ & TDisplay</div>
-        <div class="project-desc">Deux applications mobiles Flutter déployées sur bornes Android chez TINITZ.</div>
-        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
-        <div class="project-details">
-          <ul>
-            <li><strong>TTQ</strong> : gestion d'événements avec accueil des participants et formulaires d'inscription</li>
-            <li>Système de vote électronique avec affichage des résultats en temps réel</li>
-            <li>Journaux d'activité et paiements mobiles intégrés</li>
-            <li><strong>TDisplay</strong> : diffusion en boucle de présentations images et vidéos</li>
-            <li>Gestion du contenu à distance via API REST</li>
-            <li>Déployées sur bornes Android en environnement de production</li>
-          </ul>
-        </div>
-        <div class="project-stack">
-          <span class="project-tag">Flutter</span><span class="project-tag">Dart</span>
-          <span class="project-tag">API REST</span><span class="project-tag">Android</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-header">
-          <div class="project-icon">🗺️</div>
-          <span class="project-badge">Gouvernemental</span>
-        </div>
-        <div class="project-name"><a href="http://siss.geoportailsst.com/partenaires/Userfournisseurs" target="_blank" style="color:var(--navy);text-decoration:none;">DGIR & SISS ↗</a></div>
-        <div class="project-desc">Systèmes d'information géospatiale développés au CNTIG, organisme gouvernemental ivoirien.</div>
-        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
-        <div class="project-details">
-          <ul>
-            <li>Développement et maintenance de l'application DGIR (gestion de données géospatiales)</li>
-            <li>Plateforme SISS accessible sur siss.geoportailsst.com</li>
-            <li>Intégration de couches cartographiques avec SuperMap GIS</li>
-            <li>Visualisation et analyse de données spatiales 2D/3D</li>
-            <li>Usage gouvernemental à l'échelle nationale</li>
-          </ul>
-        </div>
-        <div class="project-stack">
-          <span class="project-tag">C#</span><span class="project-tag">SuperMap GIS</span>
-          <span class="project-tag">SuperGeo</span><span class="project-tag">SQL Server</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-header">
-          <div class="project-icon">🧠</div>
-          <span class="project-badge">Production — TINITZ</span>
-        </div>
-        <div class="project-name"><a href="https://mindtheos.com" target="_blank" style="color:var(--navy);text-decoration:none;">Mindtheos ↗</a></div>
-        <div class="project-desc">Plateforme SaaS de pilotage d'entreprise développée par TINITZ, intégrant finance, ventes, projets, RH, stocks et IA managériale.</div>
-        <button class="btn-more" onclick="toggleDetails(this)">▶ Voir plus</button>
-        <div class="project-details">
-          <ul>
-            <li>Participation au développement frontend et backend de la plateforme SaaS</li>
-            <li>Modules : gestion de projets, finance, ventes, RH, stocks et IA intégrée</li>
-            <li>Migration de l'outil de gestion d'équipe de Slack vers Mindtheos en interne</li>
-            <li>Déploiement et maintenance sur infrastructure Linux</li>
-            <li>Utilisé en production par l'équipe TINITZ pour le pilotage quotidien de l'entreprise</li>
-          </ul>
-        </div>
-        <div class="project-stack">
-          <span class="project-tag">Laravel</span><span class="project-tag">React</span>
-          <span class="project-tag">MySQL</span><span class="project-tag">Docker</span>
-          <span class="project-tag">Linux</span>
-        </div>
-      </div>
-
+    <div class="secondary-exp reveal">
+      <h3 class="secondary-exp-title">Expérience au Québec</h3>
+      <ul>
+        <li><strong>Agent d'entretien</strong>, GDI <span>Depuis septembre 2026</span></li>
+        <li><strong>Préposé à l'entretien des chambres</strong>, 9Onze <span>Juillet à septembre 2026</span></li>
+      </ul>
     </div>
   </div>
-</div>
+</section>
 
-<!-- EXPERIENCE -->
-<div id="experience">
+<!-- FORMATION -->
+<section id="education" class="section-bg" aria-labelledby="education-title">
   <div class="section-wrap">
-    <div class="section-label">// EXPÉRIENCE</div>
-    <h2 class="section-title">Parcours <span>professionnel</span></h2>
-    <div class="timeline">
-
-      <div class="timeline-item reveal">
-        <div class="timeline-date">Déc. 2024<br/>Avr. 2026</div>
-        <div class="timeline-line"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <div class="timeline-role">Architecte Logiciel & DevOps | Lead Développeur</div>
-          <div class="timeline-company">TINITZ — Abidjan, Côte d'Ivoire</div>
-          <div class="timeline-desc">Lead développeur de l'équipe technique sur des projets web, mobile et ERP en environnement de production.</div>
-          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
-          <ul class="timeline-tasks">
-            <li>Analyse des besoins, modélisation de l'architecture ERP TINITZ en UML et conception de la base de données MySQL</li>
-            <li>Développement multi-modules : stocks, facturation, CRM et RH avec Laravel, React et Docker</li>
-            <li>Mise en place du pipeline CI/CD (GitHub Actions) : réduction de 50% des délais de déploiement</li>
-            <li>Containerisation complète des environnements dev, staging et production avec Docker</li>
-            <li>Développement de TTQ : app mobile Flutter sur bornes Android (événements, vote électronique, paiements)</li>
-            <li>Développement de TDisplay : app Flutter d'affichage événementiel dynamique via API REST</li>
-            <li>Développement et déploiement Linux de sites web institutionnels (aricsolutions.com, tinitz.ci)</li>
-            <li>Coordination technique : standards de codage, revues de code, tests d'intégration</li>
-            <li>Migration de l'équipe de Slack vers Mindtheos (SaaS interne de pilotage d'entreprise)</li>
-          </ul>
-          <div class="timeline-stack">
-            <span class="skill-tag">Flutter</span><span class="skill-tag">Laravel</span>
-            <span class="skill-tag">React</span><span class="skill-tag">Docker</span>
-            <span class="skill-tag">GitHub Actions</span><span class="skill-tag">MySQL</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-date">2022<br/>2024</div>
-        <div class="timeline-line"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <div class="timeline-role">Analyste Programmeur (Freelance)</div>
-          <div class="timeline-company">TERRAIN.NET — France (télétravail)</div>
-          <div class="timeline-desc">Conception et développement de plateformes web distribuées à fort trafic pour des clients en France.</div>
-          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
-          <ul class="timeline-tasks">
-            <li>Conception et développement de Sondny, plateforme de sondage électoral utilisée lors de campagnes électorales</li>
-            <li>Architecture distribuée avec load balancing et cache Redis : 50 000+ utilisateurs simultanés</li>
-            <li>Optimisation SQL (EXPLAIN, index composites, cache Redis) : réduction de 60% du temps d'exécution</li>
-            <li>CRM terrain sur mesure Laravel/React/MySQL avec filtres dynamiques et visualisations Chart.js : +25% d'efficacité commerciale</li>
-            <li>Architecture offline-first Flutter/SQLite pour environnements à faible connectivité</li>
-            <li>Automatisation des processus de vente via jobs, files d'attente et tâches planifiées Laravel : −30% de tâches manuelles</li>
-          </ul>
-          <div class="timeline-stack">
-            <span class="skill-tag">Laravel</span><span class="skill-tag">React</span>
-            <span class="skill-tag">Redis</span><span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Flutter</span><span class="skill-tag">SQLite</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-date">Fév. 2022<br/>Oct. 2022</div>
-        <div class="timeline-line"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <div class="timeline-role">Stagiaire Développeur C# & SIG</div>
-          <div class="timeline-company">CNTIG — Comité National de Télédétection et d'Information Géographique, Abidjan</div>
-          <div class="timeline-desc">Stage au sein d'un organisme gouvernemental spécialisé en géomatique, SIG et cartographie.</div>
-          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
-          <ul class="timeline-tasks">
-            <li>Développement et maintenance de l'application DGIR (gestion de données géospatiales gouvernementales)</li>
-            <li>Contribution à la plateforme SISS (siss.geoportailsst.com)</li>
-            <li>Intégration de couches cartographiques avec SuperMap GIS pour la visualisation 2D/3D</li>
-            <li>Perfectionnement en C# appliqué aux systèmes d'information géographique</li>
-            <li>Développement d'applications de cartographie web</li>
-          </ul>
-          <div class="timeline-stack">
-            <span class="skill-tag">C#</span><span class="skill-tag">SuperMap GIS</span>
-            <span class="skill-tag">SuperGeo</span><span class="skill-tag">SQL Server</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-date">Avr. 2020<br/>Oct. 2020</div>
-        <div class="timeline-line"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <div class="timeline-role">Analyste Programmeur</div>
-          <div class="timeline-company">La Poste du Bénin — Cotonou, Bénin</div>
-          <div class="timeline-desc">Développement d'une application de gestion de courrier et de stock pour l'entreprise postale nationale.</div>
-          <button class="btn-more" onclick="toggleTasks(this)">▶ Voir les tâches</button>
-          <ul class="timeline-tasks">
-            <li>Analyse des besoins métier et modélisation Merise (MCD/MLD)</li>
-            <li>Développement de l'application en C# et SQL Server</li>
-            <li>Gestion des courriers entrants/sortants et suivi des stocks</li>
-            <li>Tests, recette et formation des utilisateurs</li>
-          </ul>
-          <div class="timeline-stack">
-            <span class="skill-tag">C#</span><span class="skill-tag">SQL Server</span>
-            <span class="skill-tag">Merise</span>
-          </div>
-        </div>
-      </div>
-
+    <p class="section-label">// Formation</p>
+    <h2 class="section-title" id="education-title">Formation</h2>
+    <div class="edu-grid">
+      <article class="edu-card reveal">
+        <p class="edu-date">2026 – en cours</p>
+        <h3 class="edu-degree">DESS en intelligence artificielle</h3>
+        <p class="edu-school">Université Laval</p>
+        <p class="edu-note">Membre du Club d'intelligence artificielle de l'Université Laval.</p>
+      </article>
+      <article class="edu-card reveal">
+        <p class="edu-date">2017 – 2020</p>
+        <h3 class="edu-degree">Baccalauréat en génie logiciel</h3>
+        <p class="edu-school">Université d'Abomey-Calavi, Bénin</p>
+      </article>
     </div>
   </div>
-</div>
+</section>
+
+<!-- PARCOURS IA -->
+<section id="ai-path" aria-labelledby="ai-title">
+  <div class="section-wrap">
+    <p class="section-label">// Parcours IA</p>
+    <h2 class="section-title" id="ai-title">Direction : <span>MLOps</span></h2>
+    <p class="ai-intro reveal">
+      Je m'appuie sur mon expérience DevOps (Docker, CI/CD, Azure) pour apprendre à mettre des modèles en production.
+    </p>
+    <ol class="ai-steps reveal">
+      <li class="ai-step">
+        <span class="ai-step-label">Acquis</span>
+        <strong>DevOps</strong>
+        <span>Docker, CI/CD, Azure</span>
+      </li>
+      <li class="ai-step ai-step-current">
+        <span class="ai-step-label">En cours</span>
+        <strong>Apprentissage automatique</strong>
+        <span>Python, scikit-learn, PyTorch</span>
+      </li>
+      <li class="ai-step">
+        <span class="ai-step-label">Objectif</span>
+        <strong>MLOps</strong>
+        <span>Mettre des modèles d'IA en production</span>
+      </li>
+    </ol>
+  </div>
+</section>
 
 <!-- CONTACT -->
-<div id="contact-section">
+<section id="contact-section" aria-labelledby="contact-title">
   <div class="contact-inner reveal">
-    <div class="section-label" style="justify-content:center;display:flex;color:rgba(245,158,11,0.8);">// CONTACT</div>
-    <h2 class="contact-title">Travaillons <span style="color:var(--amber2)">ensemble</span></h2>
-    <p class="contact-desc">Disponible immédiatement pour un poste en présentiel à Québec ou en télétravail. N'hésitez pas à me contacter.</p>
+    <p class="section-label contact-label">// Contact</p>
+    <h2 class="contact-title" id="contact-title">Travaillons <span>ensemble</span></h2>
+    <p class="contact-desc">Québec, Canada. Résident permanent du Canada.<br/>Téléphone : <a href="tel:+15148093207">514&nbsp;809&nbsp;3207</a></p>
     <div class="contact-links">
-      <a href="mailto:moseswisegit@gmail.com" class="btn btn-contact-primary">✉ moseswisegit@gmail.com</a>
-      <a href="assets/cv/CV_Moise_Agbossaga.pdf" download class="btn btn-contact-outline">📄 Télécharger mon CV</a>
-      <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" class="btn btn-contact-outline">LinkedIn</a>
-      <a href="https://github.com/moseswisegit" target="_blank" class="btn btn-contact-outline">GitHub</a>
+      <a href="mailto:moseswisegit@gmail.com" class="btn btn-contact-primary"><span aria-hidden="true">✉</span> moseswisegit@gmail.com</a>
+      <a href="https://linkedin.com/in/moise-agbossaga" target="_blank" rel="noopener" class="btn btn-contact-outline">LinkedIn</a>
+      <a href="https://github.com/moseswisegit" target="_blank" rel="noopener" class="btn btn-contact-outline">GitHub</a>
+      <a href="cv/CV_Agbossaga_Moise_Final.pdf" download class="btn btn-contact-outline"><span aria-hidden="true">📄</span> Télécharger mon CV</a>
     </div>
   </div>
-</div>
+</section>
+
+</main>
 
 <footer>
-  <span style="color:rgba(245,158,11,0.6)">Moïse Innocent Agbossaga</span> · Québec, Canada · 2026
+  <span class="footer-name">Moïse Innocent Agbossaga</span> · Québec, Canada · 2026
 </footer>
 
 <script src="assets/js/main.js" defer></script>
