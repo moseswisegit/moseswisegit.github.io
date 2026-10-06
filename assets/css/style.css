@@ -305,6 +305,15 @@ p { text-wrap: pretty; }
   box-shadow: var(--shadow);
 }
 .feature-intro { display: grid; gap: var(--space-6); }
+.feature-kicker { color: var(--accent-text); margin-bottom: var(--space-2); }
+.feature-title {
+  font-family: var(--serif); font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem); font-weight: 400;
+  letter-spacing: -0.02em; margin-bottom: var(--space-3); font-variation-settings: "opsz" 120;
+}
+.sub-title {
+  font-family: var(--serif); font-size: clamp(1.35rem, 1.2rem + 0.8vw, 1.75rem); font-weight: 400;
+  letter-spacing: -0.015em; margin: var(--space-8) 0 var(--space-5);
+}
 .feature-lead { font-size: var(--fs-lg); line-height: 1.6; max-width: 60ch; margin-top: var(--space-3); }
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
 .stat { padding: var(--space-5) var(--space-4) 0 0; display: flex; flex-direction: column-reverse; gap: var(--space-1); }

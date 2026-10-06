@@ -8,7 +8,7 @@ Site en ligne : https://moseswisegit.github.io/
 
 ```
 .
-├── index.html            Page unique : hero, ULconnect, projets, compétences, expérience, formation, parcours IA, contact
+├── index.html            Page unique : hero, projets (ULconnect en vedette), compétences, expérience, formation, parcours IA, contact
 ├── cv/                   CV en PDF (CV_Agbossaga_Moise_Final.pdf)
 ├── assets/
 │   ├── css/style.css     Variables (couleurs, typographie, espacements) en tête de fichier, puis composants
@@ -30,7 +30,7 @@ Puis ouvrir http://localhost:8000.
 
 ## Modifier le contenu
 
-Tout le texte est dans `index.html`, une section par bloc commenté (`<!-- 01 · ULCONNECT -->`, `<!-- 04 · EXPÉRIENCE -->`, etc.).
+Tout le texte est dans `index.html`, une section par bloc commenté (`<!-- 01 · PROJETS -->`, `<!-- 03 · EXPÉRIENCE -->`, etc.).
 
 - **Expérience** : chaque poste est un `<li class="job">` dans `<ol class="timeline">`. Copier un bloc existant pour en ajouter un.
 - **Compétences** : une `<div class="card">` par groupe, une pastille `<li>` par compétence.
