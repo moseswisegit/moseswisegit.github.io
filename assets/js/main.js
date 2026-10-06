@@ -29,6 +29,7 @@
   var navLinks = document.getElementById('navLinks');
   function setMenu(open, returnFocus) {
     navLinks.classList.toggle('is-open', open);
+    root.classList.toggle('menu-open', open);
     navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     navToggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
     if (!open && returnFocus) navToggle.focus();
@@ -43,6 +44,29 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') setMenu(false, true);
     });
+  }
+
+  // Lien du menu correspondant à la section visible
+  var navAnchors = navLinks ? navLinks.querySelectorAll('a[href^="#"]') : [];
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  if (navAnchors.length && sections.length) {
+    var ticking = false;
+    var updateCurrent = function () {
+      ticking = false;
+      var line = window.innerHeight * 0.4;
+      var currentId = '';
+      sections.forEach(function (s) { if (s.getBoundingClientRect().top <= line) currentId = s.id; });
+      var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom) currentId = sections[sections.length - 1].id;
+      navAnchors.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + currentId) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(updateCurrent); }
+    }, { passive: true });
+    updateCurrent();
   }
 
   // Apparition au défilement, une seule fois
