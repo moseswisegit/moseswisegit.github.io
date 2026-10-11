@@ -369,6 +369,8 @@ p { text-wrap: pretty; }
    ========================================================================== */
 .project { max-width: 640px; display: grid; gap: var(--space-5); }
 .project .card-head { margin-bottom: 0; }
+.project + .project { margin-top: var(--space-5); }
+.project .btn { justify-self: start; }
 .skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
 
 /* ==========================================================================
