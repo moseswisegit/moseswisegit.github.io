@@ -9,7 +9,7 @@ Site en ligne : https://moseswisegit.github.io/
 ```
 .
 ├── index.html            Page unique : hero, projets (ULconnect en vedette), compétences, expérience, formation, parcours IA, contact
-├── cv/                   CV en PDF (CV_Agbossaga_Moise_Final.pdf)
+├── cv/                   CV en PDF (CV_Agbossaga_Moise_v2.pdf)
 ├── assets/
 │   ├── css/style.css     Variables (couleurs, typographie, espacements) en tête de fichier, puis composants
 │   ├── js/main.js        Bascule de thème, menu mobile, apparition au défilement
@@ -42,7 +42,7 @@ Dans `assets/css/style.css`, modifier la ligne `--brand: #1A5276;`. La variante 
 
 ## Remplacer le CV
 
-Remplacer `cv/CV_Agbossaga_Moise_Final.pdf` en gardant exactement le même nom : les boutons « Télécharger mon CV » pointent vers ce fichier.
+Remplacer `cv/CV_Agbossaga_Moise_v2.pdf` en gardant exactement le même nom : les boutons « Télécharger mon CV » pointent vers ce fichier.
 
 ## Ajouter ou remplacer des captures d'ULconnect
 
