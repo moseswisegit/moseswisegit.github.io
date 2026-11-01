@@ -11,7 +11,7 @@
     var dark = currentTheme() === 'dark';
     themeBtn.setAttribute('aria-label', dark ? 'Activer le thème clair' : 'Activer le thème sombre');
     var meta = document.querySelectorAll('meta[name="theme-color"]');
-    meta.forEach(function (m) { m.setAttribute('content', dark ? '#141518' : '#FAFAF7'); });
+    meta.forEach(function (m) { m.setAttribute('content', dark ? '#141518' : '#FFFFFF'); });
   }
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {

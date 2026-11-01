@@ -12,9 +12,8 @@ Site en ligne : https://moseswisegit.github.io/
 ├── cv/                   CV en PDF (CV_Agbossaga_Moise_v2.pdf)
 ├── assets/
 │   ├── css/style.css     Variables (couleurs, typographie, espacements) en tête de fichier, puis composants
-│   ├── js/main.js        Bascule de thème, menu mobile, apparition au défilement
-│   ├── fonts/            Fraunces et Inter (woff2, sous-ensemble latin, licence OFL)
-│   └── img/              Favicon, photo (JPG + WebP), captures d'ULconnect (img/ulconnect/)
+│   ├── js/main.js        Bascule de thème, menu mobile, apparition au défilement (police : Calibri, polices système en secours)
+│   └── img/              Favicon, photo (JPG + WebP), aperçu du site de la RUL, captures d'ULconnect (img/ulconnect/)
 └── README.md
 ```
 
