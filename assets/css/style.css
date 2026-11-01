@@ -250,6 +250,10 @@ p { text-wrap: pretty; }
 .hero-lead { max-width: 56ch; margin-bottom: var(--space-6); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
+.techs { padding: var(--space-6) 0; }
+.techs-list { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-5) var(--space-6); max-width: 1040px; }
+.techs-list img { width: 48px; height: 48px; object-fit: contain; }
+
 /* ==========================================================================
    Sections
    ========================================================================== */
@@ -480,6 +484,7 @@ p { text-wrap: pretty; }
   .hero-photo img { width: 180px; height: 180px; }
   .hero-lead { margin-inline: auto; }
   .hero-actions { justify-content: center; }
+  .techs-list { justify-content: center; }
   .project-card { grid-template-columns: 1fr; }
   .pc-media { min-height: 0; aspect-ratio: 16 / 10; }
   .pc-body { padding: 0 var(--space-2) var(--space-2); }
