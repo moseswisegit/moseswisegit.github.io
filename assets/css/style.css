@@ -173,7 +173,7 @@ p { text-wrap: pretty; }
 
 .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .tags li {
-  font-size: var(--fs-xs); line-height: 1.4; color: var(--muted);
+  font-size: var(--fs-sm); line-height: 1.4; color: var(--text);
   padding: 0.25rem 0.7rem; border: 1px solid var(--edge); border-radius: 999px; background: var(--soft);
 }
 
@@ -377,7 +377,12 @@ p { text-wrap: pretty; }
 .pc-more[open] summary::after { transform: rotate(-135deg); }
 .pc-detail { display: grid; gap: var(--space-7); padding: var(--space-6) var(--space-3) var(--space-3); }
 
-.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); align-items: start; }
+.skills .card { padding: var(--space-5); }
+.skills .label { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); font-size: var(--fs-lg); }
+.skills .label::before { content: ''; width: 4px; height: 1.2em; border-radius: 2px; background: var(--accent); }
+.skills .tags { gap: var(--space-2); }
+.skills .tags li { padding: 0.35rem 0.85rem; font-size: var(--fs-sm); font-weight: 500; color: var(--text); background: var(--bg); }
 
 /* ==========================================================================
    Expérience : frise centrale, cartes en alternance
