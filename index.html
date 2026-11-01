@@ -158,9 +158,19 @@
       <p class="section-sub">Des projets conçus avec rigueur, du mobile au cloud.</p>
     </header>
 
-    <div class="projects-list">
+    <div class="projects-layout">
+    <aside class="filters" aria-label="Filtrer les projets">
+      <h3 class="filters-title">Catégories</h3>
+      <ul class="filters-list" id="projectFilters">
+        <li><button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tout</button></li>
+        <li><button type="button" class="filter" data-filter="web" aria-pressed="false">Web</button></li>
+        <li><button type="button" class="filter" data-filter="mobile" aria-pressed="false">Mobile</button></li>
+      </ul>
+    </aside>
 
-    <article class="project-card reveal" id="ulconnect" aria-labelledby="ulconnect-title">
+    <div class="projects-list" id="projectsList">
+
+    <article class="project-card reveal" id="ulconnect" data-cats="mobile web" aria-labelledby="ulconnect-title">
       <div class="pc-media">
         <img src="assets/img/ulconnect/13-console-moderation-640.webp" alt="Console d'administration d'ULconnect : file de modération des signalements, noms floutés" width="640" height="400" loading="lazy" decoding="async"/>
         <ul class="pc-tags"><li>Mobile</li><li>Web</li></ul>
@@ -274,14 +284,14 @@
       </details>
     </article>
 
-    <article class="project-card reveal">
+    <article class="project-card reveal" data-cats="web">
       <div class="pc-media">
         <img src="assets/img/rul-site-640.webp" alt="Page d'accueil du site de la RUL" width="640" height="400" loading="lazy" decoding="async"/>
         <ul class="pc-tags"><li>Web</li><li>Bilingue</li></ul>
       </div>
       <div class="pc-body">
         <div class="pc-top">
-          <p class="pc-by"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>Association des résident(e)s, Université Laval</p>
+          <p class="pc-by"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>Université Laval</p>
           <a href="https://rul-site.vercel.app/fr" class="btn btn-secondary pc-visit" target="_blank" rel="noopener">Visiter<svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
         </div>
         <h3 class="pc-title">Site de la RUL</h3>
@@ -296,7 +306,7 @@
       </div>
     </article>
 
-    <article class="project-card reveal">
+    <article class="project-card reveal" data-cats="mobile web">
       <div class="pc-media pc-media--ph" aria-hidden="true">
         <span>CS</span>
         <ul class="pc-tags"><li>Mobile</li><li>Web</li></ul>
@@ -317,6 +327,7 @@
       </div>
     </article>
 
+    </div>
     </div>
   </div>
 </section>

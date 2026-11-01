@@ -69,6 +69,25 @@
     updateCurrent();
   }
 
+  // Filtres de catégories des projets
+  var filterBtns = document.querySelectorAll('#projectFilters .filter');
+  var cards = document.querySelectorAll('#projectsList .project-card');
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var cat = btn.getAttribute('data-filter');
+      filterBtns.forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      cards.forEach(function (c) {
+        var show = cat === 'all' || c.getAttribute('data-cats').split(' ').indexOf(cat) !== -1;
+        c.hidden = !show;
+        if (show) c.classList.add('is-visible');
+      });
+    });
+  });
+
   // Apparition au défilement, une seule fois
   var items = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
